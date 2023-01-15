@@ -167,7 +167,7 @@
 								
 								localStorage.setItem('userContentsList',JSON.stringify(that.contentsList));
 							}else{
-								that.moreText="没有更多文章了";
+								that.moreText="已经一滴都没有了~";
 							}
 						}
 						var timer = setTimeout(function() {

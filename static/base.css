@@ -22,18 +22,19 @@ page{
 	color: #333;
 }
 .swiper-text{
+	/*注释掉摘要*/
 	position: absolute;
 	top: 0upx;
-	
 	width: 100%;
 	height: 100%;
 	color: #fff;
 	padding: 0px 60upx;
-	background-color: rgba(0,0,0,0.25);
+	background-color: rgba(0,0,0,0.0);
 }
 .swiper-title{
+	position: fixed;
+	bottom: 20px;
 	font-size: 40upx;
-	padding-top: 120upx;
 	font-weight: bold;
 	margin-bottom: 15upx;
 	opacity: 0.9;
@@ -63,13 +64,14 @@ page{
 	color: #333;
 }
 .index-sort{
+	border-radius: 0 0 12upx 12upx !important;
 	background-color: #fff;
 	text-align: center;
 	padding: 0px 15upx;
 	/* box-shadow: 0px 0px 5px rgba(0,0,0,.1); */
 }
 .index-sort-main{
-	padding: 25upx 0upx;
+	padding: 13upx 0upx;
 }
 .index-sort-i{
 	width: 80upx;
@@ -132,7 +134,7 @@ page{
 }
 .data-box-title{
 	color: #333;
-	font-size: 32upx !important;
+	font-size: 26upx !important;
 	font-weight: bold;
 	text-overflow: -o-ellipsis-lastline;
 	overflow: hidden;
@@ -240,6 +242,8 @@ page{
 }
 .cu-card.article>.cu-item .article-content-btn.article-list-btn{
 	margin-top: 10upx;
+	float:left;
+	padding-left:1px;
 }
 .article-img{
 	padding: 0upx 10upx;;
@@ -419,13 +423,14 @@ page{
 }
 .metaList .nav .cu-item.cur{
 	border:none;
-	color: #000;
-	border-bottom: #0081ff 4upx solid;
+	color: #FB7299;
+	border-bottom: #FB7299 6upx solid;
 	/* font-size: 32upx; */
 	font-weight: bold;
 }
 .load-more{
-	background-color: #f3f3f3;
+	background-color: #fff;
+	color: #77798e;
 	height: 80upx;
 	line-height: 80upx;
 	text-align: center;
@@ -459,10 +464,11 @@ page{
 .content image{
 	background-color: #f3f3f3;
 }
-.top{
+/* .top{
 	padding: 0upx 30upx 20upx 30upx;
-}
+} */
 .top-box{
+	display: table-cell;
 	padding: 20upx 0upx;
 	border-bottom: solid 1px #f9f9f9;
 	overflow:hidden;
@@ -473,27 +479,27 @@ page{
 	display: inline-block;
 	width: 35upx;
 	height: 35upx;
-	background-color: #8799a3;
+	/* background-color: #8799a3; */
 	text-align: center;
 	line-height: 35upx;
-	color: #fff;
-	margin-right: 15upx;
-	border-radius: 50%;
+	color: #FB7299;
+	margin-right: 5upx;
+	/*border-radius: 50%;*/
 	margin-left: 10upx;
 }
-.top-box:nth-child(1) text{
-	background-color:#fbbd08;
-	box-shadow: 0px 0px 8upx #fbbd08;
-	color: #333;
+/* .top-box:nth-child(1) text{
+	background-color:#F44336;
+	box-shadow: 0px 0px 8upx #F44336;
+	color: #fff;
 }
 .top-box:nth-child(2) text{
-	background-color:#e54d42;
-	box-shadow: 0px 0px 8upx #e54d42;
+	background-color:#E91E63;
+	box-shadow: 0px 0px 8upx #E91E63;
 }
 .top-box:nth-child(3) text{
-	background-color:#f37b1d;
-	box-shadow: 0px 0px 8upx #f37b1d;
-}
+	background-color:#9C27B0;
+	box-shadow: 0px 0px 8upx #9C27B0;
+} */
 .category{
 	padding: 15upx;
 }
@@ -534,9 +540,9 @@ page{
 	padding:10upx 15upx;
 	line-height: 40upx;
 	text-align: center;
-	color: #0081ff;
-	border: solid 1px rgba(0, 129, 255, 0.4);
-	background-color: #cce6ff;
+	color: #FB7299;
+	border: solid 1px #FB7299;
+	/* background-color: #cce6ff; */
 	width: auto;
 	margin: 10upx;
 	border-radius: 8upx;
@@ -661,12 +667,12 @@ page{
 	right: 30upx;
 	top: 0upx;
 	z-index: 888;
-	color: #0081FF;;
+	color: #FB7299;;
 	font-size: 22upx;
 	padding: 5upx 20upx;
 	border-radius: 8upx;
-	border: solid 1px #0081FF;;
-	background-color: #e0eaff;;
+	border: solid 1px #FB7299;;
+	/*background-color: #e0eaff;;*/
 	transition:0.3s all;
 	-webkit-transition:0.3s all;
 	-moz-transition:0.3s all;
@@ -689,8 +695,8 @@ page{
 	color: #999;
 }
 .search-type-box.active{
-	border-bottom: solid 2px #0081FF;
-	color: #333;
+	border-bottom: solid 6upx #FB7299;
+	color: #FB7299;
 }
 .loading{
 	width: 100%;
@@ -723,10 +729,10 @@ page{
 	font-size: 24upx;
 	color: #fff;
 	padding: 10upx 25upx;
-	background-color: #1AAD16;
+	background-color: #FB7299;
 }
 .clock-btn.istap{
-	background-color: #008080;
+	background-color: #FB7299;
 }
 .user-data{
 	padding: 30upx 30upx 10upx 30upx;
@@ -743,7 +749,7 @@ page{
 	margin-top: 10upx;
 }
 .user-data-value{
-	color: #2eabbf;
+	color: #FB7299;
 	font-size: 40upx;
 }
 .user-data-box:nth-child(1){
@@ -753,7 +759,7 @@ page{
 	border-right: solid 1px #f6f6f6;
 }
 .user-data-box:nth-child(3) .user-data-value{
-	color: #fbbd08;
+	color: #FB7299;
 }
 .usermarks .data-box{
 	background: none;
@@ -785,7 +791,8 @@ page{
 .content-btn{
 	max-width: 400upx;
 	margin: 0 auto;
-	padding: 40upx 0upx;
+	margin-top: 10px;
+	padding: 20upx 0upx;
 	text-align: center;
 }
 .content-btn-i{
@@ -798,12 +805,12 @@ page{
 }
 .content-btn-i .btn-i{
 	display: block;
-	color: #0081FF;
-	font-size: 60upx;
+	color: #FB7299;
+	font-size: 48upx;
 	
 }
 .content-btn-i .cuIcon-rechargefill{
-	color: #DD514C;
+	color: #FB7299;
 }
 .api-login{
 	text-align: center;
@@ -1052,7 +1059,7 @@ page{
 	padding: 30upx;
 	margin-bottom: 20upx;
 }
-.order-btn .text-blue{
+.order-btn .text-shojo{
 	float: right;
 }
 .order-btn .text-green{
@@ -1454,7 +1461,7 @@ page{
 }
 .info-footer-btn{
 	padding-right: 20upx;
-	font-size: 50upx;
+	font-size: 44upx;
 	line-height: 100upx;
 }
 .info-footer-btn text{
@@ -1704,10 +1711,11 @@ page{
 	margin-bottom: 20px;
 }
 .uni-swiper-slides uni-swiper-item{
-	padding: 15upx 25upx;
+	/*padding: 15upx 25upx;*/
 	box-sizing: border-box;
 }
 .uni-swiper-slides .swiper-box{
+	border-radius: 12upx 12upx 0 0 !important;
 	overflow: hidden;
 	width: 100%;
 	position: relative;
@@ -1716,6 +1724,7 @@ page{
 	border-radius:30upx;
 }
 .screen-swiper{
+	border-radius: 12upx 12upx 0 0 !important;
 	background-color: #fff;
 }
 .vip-maim{
@@ -1731,6 +1740,7 @@ page{
 }
 .isVIP{
 	font-size: 24upx;
+	font-weight: 600;
 	line-height: 25upx;
 	padding: 4upx 15upx;
 	border-radius: 8upx;
@@ -2073,9 +2083,9 @@ page{
 	position: absolute;
 	opacity: 0.9;
 	font-size: 24upx !important;
-	height: 50upx;
-	width: 50upx;
-	line-height: 50upx;
+	height: 40upx;
+	width: 40upx;
+	line-height: 40upx;
 	text-align: center;
 	top: -20upx;
 	right: -20upx;
@@ -2084,7 +2094,7 @@ page{
 	-webkit-transform:scale(0.8);
 }
 .header .search-form{
-	border-radius: 30upx !important;
+	border-radius: 20px !important;
 }
 .cu-avatar .home-noLogin{
 	font-size: 24upx;
@@ -2195,17 +2205,35 @@ page{
 	width:180upx;
 }
 .goUserIndex .cu-btn{
-	border-radius: 15upx;
+	border-radius: 6upx;
 }
 .goUserIndex .isFollow{
-	background: #0060ba !important;
+	background: #FB7299 !important;
 	color: #fff !important;
 }
 .goUserIndex .unFollow{
-	background: #0081ff !important;
+	background: #FB7299 !important;
 	color: #fff !important;
 }
 .goUserIndex .unFollow text{
 	font-weight: bold;
 	margin-right: 5upx;
+}
+.contentapp{
+	margin: 12upx 12upx 0px 12upx;
+}
+.top-radius {
+	border-radius: 12upx 12upx 0 0;
+}
+.hideflow {
+	overflow: hidden;
+	text-overflow:ellipsis;
+	display:-webkit-box;
+	-webkit-box-orient:vertical;
+	-webkit-line-clamp:4;
+	
+}
+.bg-shojo {
+	background-color: #FB7299;
+	color: #fff
 }

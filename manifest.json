@@ -1,15 +1,14 @@
 {
-    "name" : "规则之树",
-    "appid" : "__UNI__8D6C809",
-    "description" : "规则之树手机客户端",
-    "versionName" : "RuleTree App 1.3.2 beta",
+    "name" : "萌社",
+    "appid" : "__UNI__D6C0CEF",
+    "description" : "萌系社区客户端",
+    "versionName" : "Moe App 1.3.2 beta",
     "versionCode" : 32,
     "transformPx" : false,
     "app-plus" : {
         /* 5+App特有相关 */
         "modules" : {
             "Share" : {},
-            "OAuth" : {},
             "Statistic" : {},
             "Push" : {},
             "Camera" : {},
@@ -46,10 +45,11 @@
                     "<uses-permission android:name=\"android.permission.RECEIVE_USER_PRESENT\"/>"
                 ],
                 "abiFilters" : [ "armeabi-v7a", "arm64-v8a" ],
-                "schemes" : "ruleapp"
+                "schemes" : "moeapp"
             },
             "ios" : {
-                "dSYMs" : false
+                "dSYMs" : false,
+                "urltypes" : "moeapp"
             },
             /* ios打包配置 */
             "sdkConfigs" : {
@@ -71,7 +71,7 @@
                     },
                     "sina" : {
                         "appkey" : "1656619711",
-                        "redirect_uri" : "https://www.ruletree.club/tepass/wb_login",
+                        "redirect_uri" : "https://tp.lolii.us//wb_login",
                         "UniversalLinks" : ""
                     }
                 },
@@ -138,7 +138,7 @@
         }
     },
     "h5" : {
-        "title" : "规则之树",
+        "title" : "萌社",
         "domain" : "demo.color-ui.com",
         "router" : {
             "base" : "/h5/",

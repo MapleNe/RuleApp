@@ -41,10 +41,10 @@
 								<!--  #ifdef H5 || APP-PLUS -->
 								<block v-if="isvip==1">
 									<block v-if="vip==1">
-										<text class="isVIP bg-gradual-red">VIP</text>
+										<text class="isVIP bg-shojo">大会员</text>
 									</block>
 									<block v-else>
-										<text class="isVIP bg-yellow">VIP</text>
+										<text class="isVIP bg-shojo">大会员</text>
 									</block>
 								</block>
 									<!--  #endif -->
@@ -177,8 +177,8 @@
 					
 				</view>
 				<view class="userInfo-bottom-box">
-					<button class="cu-btn bg-gradual-red" @tap="follow(0)" v-if="isFollow==1"><text class="cuIcon-add"></text>已关注</button>
-					<button class="cu-btn bg-gradual-red" @tap="follow(1)" v-else><text class="cuIcon-add"></text>关注</button>
+					<button class="cu-btn bg-shojo" @tap="follow(0)" v-if="isFollow==1"><text class="cuIcon-add"></text>已关注</button>
+					<button class="cu-btn bg-shojo" @tap="follow(1)" v-else><text class="cuIcon-add"></text>关注</button>
 					
 				</view>
 			</view>

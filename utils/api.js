@@ -1,9 +1,9 @@
-var API_URL = 'http://127.0.0.1:8081/';
+var API_URL = 'https://api.lolii.us/';
 //var API_URL = 'https://api.ruletree.club/';
-var WEB_URL = 'https://www.ruletree.club/';
-var GroupUrl = 'https://jq.qq.com/?_wv=1027&k=tzDllRvf';
+var WEB_URL = 'https://tp.lolii.us/';
+var GroupUrl = '#';
 
-var GithubUrl = 'https://github.com/buxia97/RuleApp';
+var GithubUrl = '#';
 
 //配合nginx实现的访问key
 var key = "";
@@ -12,15 +12,15 @@ var key = "";
 //其次，小程序端有应用程序大小限制，过多的页面会导致资源超出大小
 
 //下面主要用于用户协议
-var appName="规则之树";
-var appEmail = "buxia97@126.com";
+var appName="萌社";
+var appEmail = "admin@lolii.us";
 //全局数据调用部分【重要】
 
 //用户头衔，自己修改名词
-var rankList = ["小白","萌新","入门","熟手","大佬","巨佬","传说","古神"];
+var rankList = ["Lv.1","Lv.2","Lv.3","Lv.4","Lv.5","Lv.6"];
 
 //头衔对应的背景颜色
-var rankStyle = ["#6699CC","#666699","#009933","#FF9900","#ff007f","#FF0033","#660033","#000000"];
+var rankStyle = ["#C0C0C0","#8BD29B","#7BCDEF","#FEBB8B","#EE672A","#FF0000"];
 
 //链接规则(用于站内链接自动跳转和文章分享)，请根据自己的网站文件链接自由发挥，比如我的就是
 //https://www.ruletree.club/archives/2824/
@@ -30,11 +30,11 @@ var pageRule =WEB_URL+"{slug}.html" //独立页面
 
 
 //使用攻略文章id，typecho文章表cid
-var raiders = 1518
+var raiders = 7
 //意见反馈文章id，typecho文章表cid
-var feedback = 2689
+var feedback = 8
 //关于我们文章id，typecho文章表cid
-var aboutme = 2
+var aboutme = 6
 
 //小程序配置
 //小程序端是否开启评论，1位开启，0位关闭。
@@ -331,9 +331,9 @@ module.exports = {
 	//下面这个方法涉及图片上传，自己修改定义接口路径
 	upload:function(){
 		//return API_URL + 'upload/ossUpload';//OSS对象存储接口
-		return API_URL + 'upload/cosUpload';//COS对象存储接口
+		//return API_URL + 'upload/cosUpload';//COS对象存储接口
 		//return API_URL + 'upload/ftpUpload'; //远程ftp上传接口
-		//return API_URL + 'upload/localUpload'; //本地上传接口
+		return API_URL + 'upload/localUpload'; //本地上传接口
 	},
 	shopList:function(){
 		return API_URL + 'typechoShop/shopList';

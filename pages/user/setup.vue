@@ -37,7 +37,7 @@
 		</view>
 		<view class="logout" v-if="token!=''" @tap="logout">
 			<view class="logout-main">
-				<text class="text-red">退出登录</text>
+				<text class="text-shojo">退出登录</text>
 			</view>
 			
 		</view>

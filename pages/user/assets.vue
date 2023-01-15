@@ -15,7 +15,7 @@
 		<view :style="[{padding:NavBar + 'px 10px 0px 10px'}]"></view>
 		<view class="data-box">
 			<view class="myAssets">
-				<text class="text-red myAssets-num">{{assets}}</text>积分
+				<text class="text-red myAssets-num">{{assets}}</text>萌
 			</view>
 			<view class="myAssets-btn">
 				<text class="cu-btn bg-blue radius" @tap="userrecharge">在线充值</text>
@@ -23,8 +23,8 @@
 			</view>
 			<view class="vip-maim" v-if="isvip==1">
 				<view class="bg-gradual-red text-center shadow-blur">
-					<view class="text-lg text-bold">欢迎您，尊贵的VIP用户</view>
-					<view class="margin-top-sm text-Abc">正在享受全站商品{{tovipDiscount(vipDiscount)}}折优惠，及VIP专属头衔！</view>
+					<view class="text-lg text-bold">欢迎您，尊贵的大会员用户</view>
+					<view class="margin-top-sm text-Abc">正在享受全站商品{{tovipDiscount(vipDiscount)}}折优惠，及大会员专属头衔！</view>
 					<view class="margin-top-sm text-Abc" v-if="vip==1">到期时间：永久</view>
 					<view class="margin-top-sm text-Abc" v-else>到期时间：{{formatDate(vip)}}</view>
 					<view class="cu-btn radius margin-top bg-black  shadow-blur" @tap="buyvip">立即续期</view>
@@ -56,7 +56,7 @@
 					<view class="order-time">{{formatDate(item.created)}}</view>
 				</view>
 				<view class="order-btn">
-					<text class="text-red">{{item.totalAmount}}积分</text>
+					<text class="text-red">{{item.totalAmount}}萌</text>
 					<text class="text-yellow pay-status" v-if="item.status==0">未支付</text>
 					<text class="text-green pay-status" v-if="item.status==1">已支付</text>
 				</view>
@@ -72,13 +72,13 @@
 		<view class="cu-modal" :class="modalName=='DialogModal1'?'show':''">
 			<view class="cu-dialog">
 				<view class="cu-bar bg-white justify-end">
-					<view class="content">VIP开通说明</view>
+					<view class="content">大会员开通说明</view>
 					<view class="action" @tap="hideModal">
 						<text class="cuIcon-close text-red"></text>
 					</view>
 				</view>
 				<view class="padding-xl text-left">
-					<view>开通VIP后，在有效期结束之前，您将享受全站所有商品（无论类型）的对应折扣优惠。但因为商品采用积分结算，而积分仅能为整数，所以在进行折扣计算时，将默认已整数结果进行计算。所以，对于VIP用户，小于或等于1积分的商品，将视为免费。价格大于1的商品，将省略小数点后部分。</view>
+					<view>开通大会员后，在有效期结束之前，您将享受全站所有商品（无论类型）的对应折扣优惠。但因为商品采用萌结算，而萌仅能为整数，所以在进行折扣计算时，将默认已整数结果进行计算。所以，对于大会员用户，小于或等于1萌的商品，将视为免费。价格大于1的商品，将省略小数点后部分。</view>
 				</view>
 			</view>
 		</view>

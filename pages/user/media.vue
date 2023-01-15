@@ -16,7 +16,7 @@
 		<view class="cu-list menu margin-top">
 			<view class="cu-item" @tap="toGroup">
 				<view class="content">
-					<text class="cuIcon-friendfill  text-blue"></text>
+					<text class="cuIcon-friendfill  text-shojo"></text>
 					<text>QQ交流群</text>
 				</view>
 				<view class="action">

@@ -1,7 +1,7 @@
 <template>
 	<view class="user" :class="AppStyle">
 		<view class="header" :style="[{height:CustomBar + 'px'}]">
-			<view class="cu-bar bg-white" :style="{'height': CustomBar + 'px','padding-top':StatusBar + 'px'}">
+			<view class="cu-bar bg-white top-radius" :style="{'height': CustomBar + 'px','padding-top':StatusBar + 'px'}">
 				<view class="action" @tap="back">
 					<text class="cuIcon-back"></text>
 				</view>
@@ -9,7 +9,7 @@
 					付费广告位
 				</view>
 				<view class="action">
-					<text class="text-blue" @tap="toLink('/pages/ads/myAds')">我的广告</text>
+					<text class="text-shojo" @tap="toLink('/pages/ads/myAds')">我的广告</text>
 				</view>
 			</view>
 		</view>
@@ -25,10 +25,10 @@
 					</view>
 					<view class="ads-info grid col-3 text-center">
 						<view class="ads-num">
-							剩余：<text class="text-blue">{{pushAdsNum || 0}}</text>
+							剩余：<text class="text-shojo">{{pushAdsNum || 0}}</text>
 						</view>
 						<view class="ads-price">
-							<text class="text-red">{{pushAdsPrice || 0}}积分</text>/天
+							<text class="text-red">{{pushAdsPrice || 0}}萌</text>/天
 						</view>
 						<view class="ads-btn" @tap="goAdsBuy(pushAdsPrice,pushAdsNum,0)">
 							<text class="text-green">立即购买</text>
@@ -46,10 +46,10 @@
 					</view>
 					<view class="ads-info grid col-3 text-center">
 						<view class="ads-num">
-							剩余：<text class="text-blue">{{bannerAdsNum || 0}}</text>
+							剩余：<text class="text-shojo">{{bannerAdsNum || 0}}</text>
 						</view>
 						<view class="ads-price">
-							<text class="text-red">{{bannerAdsPrice || 0}}积分</text>/天
+							<text class="text-red">{{bannerAdsPrice || 0}} 萌</text>/天
 						</view>
 						<view class="ads-btn" @tap="goAdsBuy(bannerAdsPrice,bannerAdsNum,1)">
 							<text class="text-green">立即购买</text>
@@ -67,10 +67,10 @@
 					</view>
 					<view class="ads-info grid col-3 text-center">
 						<view class="ads-num">
-							剩余：<text class="text-blue">{{startAdsNum || 0}}</text>
+							剩余：<text class="text-shojo">{{startAdsNum || 0}}</text>
 						</view>
 						<view class="ads-price">
-							<text class="text-red">{{startAdsPrice || 0}}积分</text>/天
+							<text class="text-red">{{startAdsPrice || 0}}萌</text>/天
 						</view>
 						<view class="ads-btn" @tap="goAdsBuy(startAdsPrice,startAdsNum,2)">
 							<text class="text-green">立即购买</text>

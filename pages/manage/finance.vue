@@ -6,7 +6,7 @@
 					<text class="cuIcon-back"></text>
 				</view>
 				<view class="content text-bold" :style="[{top:StatusBar + 'px'}]">
-					财务流水（积分）
+					财务流水（萌）
 				</view>
 			</view>
 		</view>
@@ -53,7 +53,7 @@
 					<text class="tokenDate">
 						{{formatDate(item.created)}}
 					</text>
-					<text class="cu-btn bg-white text-blue" @tap="setUid(item.uid)">UID:{{item.uid}}</text>
+					<text class="cu-btn bg-white text-shojo" @tap="setUid(item.uid)">UID:{{item.uid}}</text>
 				</view>
 			</view>
 			<view class="load-more" @tap="loadMore" v-if="financeList.length>0">

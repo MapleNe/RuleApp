@@ -35,16 +35,18 @@
 										<!--  #ifdef H5 || APP-PLUS -->
 										<block v-if="item.isvip>0">
 											<block v-if="item.vip==1">
-												<text class="isVIP bg-gradual-red">VIP</text>
+												<text class="isVIP bg-shojo">大会员</text>
 											</block>
 											<block v-else>
-												<text class="isVIP bg-yellow">VIP</text>
+												<text class="isVIP bg-shojo">大会员</text>
 											</block>
 										</block>
 										<!--  #endif -->
 										</view>
 										<view class="text-content text-df break-all">
-											<rich-text :nodes="markHtml(item.text)"></rich-text>
+											<view class="hideflow">
+												<rich-text :nodes="markHtml(item.text)"></rich-text>
+											</view>
 											
 										</view>
 										<view class="bg-grey light padding-sm radius margin-top-sm  text-sm">

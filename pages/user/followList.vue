@@ -28,10 +28,10 @@
 						<!--  #ifdef H5 || APP-PLUS -->
 						<block v-if="item.userJson.isvip>0">
 							<block v-if="item.userJson.vip==1">
-								<text class="isVIP bg-gradual-red">VIP</text>
+								<text class="isVIP bg-shojo">大会员</text>
 							</block>
 							<block v-else>
-								<text class="isVIP bg-yellow">VIP</text>
+								<text class="isVIP bg-shojo">大会员</text>
 							</block>
 						</block>
 						<!--  #endif -->

@@ -198,7 +198,7 @@
 								}
 								
 							}else{
-								that.moreText="没有更多文章了";
+								that.moreText="已经一滴都没有了~";
 								if(!isPage){
 									that.contentsList = list;
 								}

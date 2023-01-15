@@ -61,10 +61,10 @@
 							<text class="text-grey radius" v-else  @tap="rmTop(item.cid)">取消置顶</text>
 							<text class="text-green radius" v-if="item.isswiper==0"  @tap="addSwiper(item.cid)">轮播</text>
 							<text class="text-grey radius" v-else  @tap="rmSwiper(item.cid)">取消轮播</text>
-							<text class="text-blue radius" @tap="setFields(item.cid,item.abcimg)">图文类型</text>
+							<text class="text-shojo radius" @tap="setFields(item.cid,item.abcimg)">图文类型</text>
 						</block>
 						
-						<text class="text-blue radius" @tap="toEdit(item.cid)">编辑</text>
+						<text class="text-shojo radius" @tap="toEdit(item.cid)">编辑</text>
 						<text class="text-red radius"  @tap="toDelete(item.cid)" v-if="group=='administrator'">删除</text>
 						
 						<text class="text-gray radius" style="float: right;">{{item.authorInfo.name}}</text>
@@ -305,7 +305,7 @@
 								}
 								
 							}else{
-								that.moreText="没有更多文章了";
+								that.moreText="已经一滴都没有了~";
 								if(!isPage){
 									that.contentsList = list;
 								}

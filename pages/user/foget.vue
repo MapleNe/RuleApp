@@ -21,7 +21,7 @@
 				</view>
 				<view class="cu-form-group">
 					<input name="input" v-model="code" placeholder="请输入验证码"></input>
-					<view class="sendcode text-blue" v-if="show" @tap="SendCode">发送</view>
+					<view class="sendcode text-shojo" v-if="show" @tap="SendCode">发送</view>
 					<view class="sendcode text-gray" v-if="!show">{{ times }}s</view>
 				</view>
 				<view class="cu-form-group">

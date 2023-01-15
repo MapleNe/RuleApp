@@ -79,10 +79,10 @@
 				<text class="cuIcon-link" @tap="showModal" data-target="LinksModal"></text>
 				<text class="cuIcon-attentionforbidfill" @tap="toHideText"></text>
 				
-				<text class="cuIcon-tag" :class="tag!=''?'text-blue':''" @tap="addTag"></text>
+				<text class="cuIcon-tag" :class="tag!=''?'text-shojo':''" @tap="addTag"></text>
 				<text class="text-red cuIcon-shopfill" @tap="setShop" v-if="shopID==-1"></text>
 				<text class="text-yellow cuIcon-shopfill" @tap="setShop" v-else></text>
-				<text class="cuIcon-read" :class="isShow?'text-blue':''" @tap="toIsShow(false)"></text>
+				<text class="cuIcon-read" :class="isShow?'text-shojo':''" @tap="toIsShow(false)"></text>
 				
 			</view>
 			<view class="cu-form-group">
@@ -136,7 +136,7 @@
 				
 				<view class="cu-bar bg-white justify-end">
 					<view class="action">
-						<button class="cu-btn line-blue text-blue" @tap="hideModal">取消</button>
+						<button class="cu-btn line-blue text-shojo" @tap="hideModal">取消</button>
 						<button class="cu-btn bg-blue margin-left" @tap="tolinks">确定</button>
 		
 					</view>

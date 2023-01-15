@@ -6,7 +6,7 @@
 					<text class="cuIcon-back"></text>
 				</view>
 				<view class="content text-bold" :style="[{top:StatusBar + 'px'}]">
-					积分商城
+					萌商
 				</view>
 				<view class="action">
 				</view>
@@ -25,22 +25,22 @@
 					全部
 				</view>
 				<view class="shop-sort-box" @tap="setType(1)":class="type=='1'?'active':''">
-					实体商品
+					实体
 				</view>
 				<view class="shop-sort-box" @tap="setType(2)":class="type=='2'?'active':''">
 					源码
 				</view>
 				<view class="shop-sort-box" @tap="setType(3)":class="type=='3'?'active':''">
-					软件工具
+					软件
 				</view>
 				<view class="shop-sort-box" @tap="setType(4)":class="type=='4'?'active':''">
-					付费阅读
+					阅读
 				</view>
 			</view>
 		</view>
 		<view class="data-box">
 			<view class="no-data" v-if="shopList.length==0">
-				暂时没有商品
+				暂时没有商品哦~
 			</view>
 			<view class="shop-list grid col-2">
 				
@@ -54,10 +54,10 @@
 						</view>
 						<view class="shop-info">
 							<block v-if="isvip==1">
-								<text class="shop-price text-yellow text-bold">{{parseInt(item.price * item.vipDiscount)}}</text><text class="text-sm margin-left-sm text-yellow">积分</text>
+								<text class="shop-price text-yellow text-bold">{{parseInt(item.price * item.vipDiscount)}}</text><text class="text-sm margin-left-sm text-yellow">萌</text>
 							</block>
 							<block v-else>
-								<text class="shop-price text-red text-bold">{{item.price}}</text><text class="text-sm margin-left-sm text-red">积分</text>
+								<text class="shop-price text-red text-bold">{{item.price}}</text><text class="text-sm margin-left-sm text-red">萌</text>
 							</block>
 							<text class="cuIcon-cart"></text>
 						</view>

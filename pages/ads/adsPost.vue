@@ -31,7 +31,7 @@
 			<view class="cu-form-group">
 				<view class="title">广告类型</view>
 				<view class="picker">
-					<text class="text-blue">{{typeList[type].name}}</text>
+					<text class="text-shojo">{{typeList[type].name}}</text>
 					
 				</view>
 			</view>
@@ -57,7 +57,7 @@
 						选择跳转类型
 					</block>
 					<block v-else>
-						<text class="text-blue">{{urltypeList[urltype].name}}</text>
+						<text class="text-shojo">{{urltypeList[urltype].name}}</text>
 					</block>
 					<text class="cuIcon-right"></text>
 				</view>
@@ -67,11 +67,11 @@
 					<view class="title">购买天数</view>
 					<input placeholder="输入购买天数" type="number" name="input" v-model="day" @input="day = limit(day,0)"  :adjust-position="false" :focus="false"></input>
 					<view class="action">
-						<text class="text-red">{{price}}积分/天</text>
+						<text class="text-red">{{price}}萌/天</text>
 					</view>
 				</view>
 				<view class="form-tips">
-					预计金额：<text class="text-blue">{{total(day,price)}}</text> 积分
+					预计金额：<text class="text-shojo">{{total(day,price)}}</text> 萌
 				</view>
 			</block>
 		</form>

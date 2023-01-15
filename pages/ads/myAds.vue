@@ -34,7 +34,7 @@
 						{{item.name}}
 					</view>
 					<view class="myAds-time">
-						预计到期时间：<text class="text-blue">{{formatDate(item.close)}}</text>
+						预计到期时间：<text class="text-shojo">{{formatDate(item.close)}}</text>
 						<text class="text-green">{{getType(item.type)}}</text>
 					</view>
 					<view class="myAds-concent">

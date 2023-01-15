@@ -6,7 +6,7 @@
 					<text class="cuIcon-back"></text>
 				</view>
 				<view class="content text-bold" :style="[{top:StatusBar + 'px'}]">
-					开通或续期VIP
+					开通或续期大会员
 				</view>
 				<view class="action">
 				</view>
@@ -17,8 +17,8 @@
 			<view class="vip-box">
 				<view class="vip-maim">
 					<view class="bg-gradual-blue text-center shadow-blur">
-						<view class="text-lg text-bold">月付VIP<text class="text-red margin-left">{{vipPrice*30}}积分</text></view>
-						<view class="margin-top-sm text-Abc">为您的账号获得30天VIP期限</view>
+						<view class="text-lg text-bold">月付大会员<text class="text-red margin-left">{{vipPrice*30}}萌</text></view>
+						<view class="margin-top-sm text-Abc">为您的账号获得30天大会员期限</view>
 						<view class="cu-btn radius margin-top bg-black  shadow-blur" @tap="toBuyVip(30)">立即购买</view>
 					</view>
 				</view>
@@ -26,8 +26,8 @@
 			<view class="vip-box">
 				<view class="vip-maim">
 					<view class="bg-gradual-blue text-center shadow-blur">
-						<view class="text-lg text-bold">季付VIP<text class="text-red margin-left">{{vipPrice*90}}积分</text></view>
-						<view class="margin-top-sm text-Abc">获得90天VIP期限</view>
+						<view class="text-lg text-bold">季付大会员<text class="text-red margin-left">{{vipPrice*90}}萌</text></view>
+						<view class="margin-top-sm text-Abc">获得90天大会员期限</view>
 						<view class="cu-btn radius margin-top bg-black  shadow-blur" @tap="toBuyVip(90)">立即购买</view>
 					</view>
 				</view>
@@ -35,8 +35,8 @@
 			<view class="vip-box">
 				<view class="vip-maim">
 					<view class="bg-gradual-blue text-center shadow-blur">
-						<view class="text-lg text-bold">年付VIP<text class="text-red margin-left">{{vipPrice*365}}积分</text></view>
-						<view class="margin-top-sm text-Abc">获得365天VIP期限</view>
+						<view class="text-lg text-bold">年付大会员<text class="text-red margin-left">{{vipPrice*365}}萌</text></view>
+						<view class="margin-top-sm text-Abc">获得365天大会员期限</view>
 						<view class="cu-btn radius margin-top bg-black  shadow-blur" @tap="toBuyVip(365)">立即购买</view>
 					</view>
 				</view>
@@ -44,8 +44,8 @@
 			<view class="vip-box">
 				<view class="vip-maim">
 					<view class="bg-gradual-orange padding radius text-center shadow-blur">
-						<view class="text-lg text-bold">永久VIP<text class="text-black margin-left">{{vipPrice*500}}积分</text></view>
-						<view class="margin-top-sm text-Abc">享受永久VIP特权，并获取高亮VIP头衔</view>
+						<view class="text-lg text-bold">永久大会员<text class="text-black margin-left">{{vipPrice*500}}萌</text></view>
+						<view class="margin-top-sm text-Abc">享受永久大会员特权，并获取高亮大会员头衔</view>
 						<view class="cu-btn radius margin-top bg-black  shadow-blur" @tap="toBuyVip(500)">立即购买</view>
 					</view>
 				</view>
@@ -146,7 +146,7 @@
 					"token":token
 				}
 				uni.showModal({
-					title: '确定要购买'+day+'天VIP吗',
+					title: '确定要购买'+day+'天大会员吗',
 					success: function (res) {
 						if (res.confirm) {
 							uni.showLoading({

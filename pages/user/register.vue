@@ -24,7 +24,7 @@
 				</view>
 				<view class="cu-form-group" v-if="isEmail==1">
 					<input name="input" v-model="code" placeholder="请输入验证码"></input>
-					<view class="sendcode text-blue" v-if="show" @tap="RegSendCode">发送</view>
+					<view class="sendcode text-shojo" v-if="show" @tap="RegSendCode">发送</view>
 					<view class="sendcode text-gray" v-if="!show">{{ times }}s</view>
 				</view>
 				<view class="cu-form-group">
@@ -38,7 +38,7 @@
 				</view>
 				<view class="user-btn flex flex-direction">
 					<button class="cu-btn bg-blue margin-tb-sm lg" @tap="userRegister">立即注册</button>
-					<text class="text-blue text-right margin-top" @tap="toAgreement">注册即为同意 《用户协议》</text>
+					<text class="text-shojo text-right margin-top" @tap="toAgreement">注册即为同意 《用户协议》</text>
 				</view>
 			</form>
 		</view>

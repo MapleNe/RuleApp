@@ -44,7 +44,7 @@
 							{{item.title}}
 						</view>
 						<view class="shop-info text-center">
-							<text class="shop-btn text-blue" @tap="editShop(item.id)">编辑</text>
+							<text class="shop-btn text-shojo" @tap="editShop(item.id)">编辑</text>
 							<text class="shop-btn text-red" @tap="deleteShop(item.id)">删除</text>
 						</view>
 					</view>

@@ -36,7 +36,7 @@ export default {
                     icon_a: '/static/tabbar/home_cur.png',  //选中图片
                     path: "/pages/home/home",  //页面路径
                 },{
-                    text: '发现',
+                    text: '动态',
                     icon: '/static/tabbar/find.png',
                     icon_a: '/static/tabbar/find_cur.png',
                     path: "/pages/home/find",
@@ -95,7 +95,7 @@ export default {
 
 <style>
     .tabbarActive{
-        color: #0081FF !important;
+        color: #FB7299 !important;
     }
 	.tabbar view{
 		overflow: initial;
@@ -161,7 +161,7 @@ export default {
 		border: solid 1px #f9f9f9;
 	}
 	.addPost-i{
-		background-color: #0081FF;
+		background-color: #FB7299;
 		width: 100%;
 		height: 100%;
 		border-radius: 50%;

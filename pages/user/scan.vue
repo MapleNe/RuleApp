@@ -29,7 +29,7 @@
 			</view>
 			<view class="scan-user-btn">
 				<view class="cu-btn bg-blue" @tap="scanLogin">确认登录</view>
-				<view class="text-blue" @tap="back">取消</view>
+				<view class="text-shojo" @tap="back">取消</view>
 			</view>
 		</view>
 	</view>

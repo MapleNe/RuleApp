@@ -42,7 +42,7 @@
 					<text>编辑</text>
 				</view>
 				<view class="search-type-box" @tap="getType('vip')" :class="dataType=='vip'?'active':''">
-					<text>VIP</text>
+					<text>大会员</text>
 				</view>
 				<view class="search-type-box" @tap="getType('ban')" :class="dataType=='ban'?'active':''">
 					<text>封禁</text>
@@ -61,17 +61,17 @@
 						<!--  #ifdef H5 || APP-PLUS -->
 						<block v-if="item.isvip>0">
 							<block v-if="item.vip==1">
-								<text class="isVIP bg-gradual-red">VIP</text>
+								<text class="isVIP bg-shojo">大会员</text>
 							</block>
 							<block v-else>
-								<text class="isVIP bg-yellow">VIP</text>
+								<text class="isVIP bg-shojo">大会员</text>
 							</block>
 						</block>
 						<!--  #endif -->
 					</view>
 					<view class="text-gray text-sm flex">
 						<view class="text-cut">
-							UID:{{item.uid}}&nbsp;&nbsp;积分:<text class="text-blue">{{item.assets}}</text>
+							UID:{{item.uid}}&nbsp;&nbsp;萌:<text class="text-shojo">{{item.assets}}</text>
 						</view>
 					</view>
 				</view>
@@ -86,7 +86,7 @@
 							<view class="cu-btn text-red radius" @tap="deleteUser(item.uid)"  v-if="group=='administrator'">
 								<text class="cuIcon-deletefill"></text>
 							</view>
-							<view class="cu-btn text-blue radius" @tap="toEdit(item.uid)"  v-if="group=='administrator'">
+							<view class="cu-btn text-shojo radius" @tap="toEdit(item.uid)"  v-if="group=='administrator'">
 								<text class="cuIcon-post"></text>
 							</view>
 							
@@ -98,7 +98,7 @@
 						
 					</block>
 					<block v-if="type=='get'">
-						<view class="cu-btn text-blue radius" @tap="getUser(item)">
+						<view class="cu-btn text-shojo radius" @tap="getUser(item)">
 							选择
 						</view>
 					</block>

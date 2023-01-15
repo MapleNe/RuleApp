@@ -42,7 +42,7 @@
 			<view class="cu-form-group">
 				<view class="title">详细设置
 					<text class="text-gray text-sm margin-left" v-if="isInfo==0">未设置</text>
-					<text class="text-blue text-sm margin-left" v-else>已设置</text>
+					<text class="text-shojo text-sm margin-left" v-else>已设置</text>
 				</view>
 				<view class="action" @tap="toSetShopInfo">
 					设置收费内容，缩略图
@@ -56,7 +56,7 @@
 				<text class="cuIcon-picfill" @tap="upload"></text>
 				<text class="cuIcon-font" @tap="toCode"></text>
 				<text class="cuIcon-link" @tap="showModal" data-target="LinksModal"></text>
-				<text class="cuIcon-read" :class="isShow?'text-blue':''" @tap="toIsShow"></text>
+				<text class="cuIcon-read" :class="isShow?'text-shojo':''" @tap="toIsShow"></text>
 			</view>
 			<view class="cu-form-group">
 				<textarea maxlength="-1" v-if="!isShow" class="text" @input="textareaAInput" v-model="text" placeholder="商品介绍" :style="poststyle" @focus="ToisText(1)" @blur="ToisText(0)" :adjust-position="false" :focus="false"></textarea>
@@ -115,7 +115,7 @@
 				</view>
 				<view class="cu-bar bg-white justify-end">
 					<view class="action">
-						<button class="cu-btn line-blue text-blue" @tap="hideModal">取消</button>
+						<button class="cu-btn line-blue text-shojo" @tap="hideModal">取消</button>
 						<button class="cu-btn bg-blue margin-left" @tap="tolinks">确定</button>
 		
 					</view>
@@ -142,7 +142,7 @@
 				
 				metaList:[
 					{
-						"name":"实体商品",
+						"name":"实体",
 						"mid":1
 					},
 					{
@@ -150,11 +150,11 @@
 						"mid":2
 					},
 					{
-						"name":"软件工具",
+						"name":"软件",
 						"mid":3
 					},
 					{
-						"name":"付费阅读",
+						"name":"阅读",
 						"mid":4
 					}
 				],

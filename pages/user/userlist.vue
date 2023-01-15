@@ -29,10 +29,10 @@
 						<!--  #ifdef H5 || APP-PLUS -->
 						<block v-if="item.isvip>0">
 							<block v-if="item.vip==1">
-								<text class="isVIP bg-gradual-red">VIP</text>
+								<text class="isVIP bg-shojo">大会员</text>
 							</block>
 							<block v-else>
-								<text class="isVIP bg-yellow">VIP</text>
+								<text class="isVIP bg-shojo">大会员</text>
 							</block>
 						</block>
 						<!--  #endif -->
@@ -43,7 +43,7 @@
 						</view> </view>
 				</view>
 				<view class="action goUserIndex">
-					<view class="cu-btn bg-gradual-red">主页</view>
+					<view class="cu-btn bg-shojo">主页</view>
 					
 				</view>
 			</view>

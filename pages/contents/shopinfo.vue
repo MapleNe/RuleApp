@@ -23,7 +23,7 @@
 				{{title}}
 			</view>
 			<view class="shopinfo-info">
-				<text class="text-sm shop-user text-blue"  @tap="toUserContents(userInfo)"><block v-if="userInfo.screenName!=''">{{userInfo.screenName}}</block>
+				<text class="text-sm shop-user text-shojo"  @tap="toUserContents(userInfo)"><block v-if="userInfo.screenName!=''">{{userInfo.screenName}}</block>
 							<block v-else>{{userInfo.name}}</block>
 			</text>
 				<text class="text-sm text-right text-gray">剩余数量：{{num}}</text>
@@ -37,11 +37,11 @@
 		<view class="shopinfo-bar grid col-2" v-if="isBuy==0||type==1">
 			<view class="shopinfo-price">
 				<block v-if="isvip==1">
-					{{parseInt(price * vipDiscount)}} 积分
-					<text class="text-yellow margin-left text-sm">VIP优惠</text>
+					{{parseInt(price * vipDiscount)}} 萌
+					<text class="text-yellow margin-left text-sm">大会员优惠</text>
 				</block>
 				<block v-else>
-					{{price}} 积分
+					{{price}} 萌
 				</block>
 			</view>
 			<view class="shopinfo-btn">

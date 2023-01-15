@@ -59,7 +59,7 @@
 						<text class="cu-btn text-green radius" v-if="item.isrecommend==0"  @tap="addRecommend(item.mid)">推荐</text>
 						<text class="cu-btn text-grey radius" v-else  @tap="rmRecommend(item.mid)">取消推荐</text>
 					
-						<text class="cu-btn text-blue radius" @tap="toEdit(item.mid)">编辑</text>
+						<text class="cu-btn text-shojo radius" @tap="toEdit(item.mid)">编辑</text>
 					</view>
 				</view>
 				<view class="load-more" @tap="loadMore" v-if="metaList.length>0">
@@ -185,7 +185,7 @@
 								}
 								
 							}else{
-								that.moreText="没有更多文章了";
+								that.moreText="已经一滴都没有了~";
 								if(!isPage){
 									that.metaList = list;
 								}

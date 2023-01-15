@@ -9,7 +9,7 @@
 			
 			"app-plus":{
 				"pullToRefresh":{
-					"color":"#54b5db",
+					"color":"#fb7299",
 					"style":"circle"
 				}
 				
@@ -421,7 +421,7 @@
 			"allowsBounceVertical": "NO"
 		},
 		"navigationBarBackgroundColor": "#0081ff",
-		"navigationBarTitleText": "规则之树",
+		"navigationBarTitleText": "萌社",
 		"navigationStyle": "custom",
 		"navigationBarTextStyle": "black"
 	},
@@ -437,8 +437,8 @@
 	},
 
 	"tabBar": {
-		"color": "#333333",
-		"selectedColor": "#54b5db", 
+		"color": "#77798e",
+		"selectedColor": "#fb7299", 
 		"borderStyle": "white",
 		"backgroundColor": "#ffffff",
 		// #ifdef APP-PLUS
@@ -453,7 +453,7 @@
 	
 			},
 			{
-				"text": "发现",
+				"text": "动态",
 				"pagePath": "pages/home/find",
 				"iconPath": "static/tabbar/find.png",
 				"selectedIconPath": "static/tabbar/find_cur.png"

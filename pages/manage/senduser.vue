@@ -20,7 +20,7 @@
 				<view class="title">用户ID</view>
 				<input placeholder="请输入用户ID" name="input" type="number" v-model="toid"></input>
 				<view class="action">
-					<text class="text-blue" @tap="toUser">选择用户</text>
+					<text class="text-shojo" @tap="toUser">选择用户</text>
 				</view>
 			</view>
 			<view class="cu-form-group">

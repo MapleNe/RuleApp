@@ -30,7 +30,7 @@
 			<view class="cu-form-group" v-if="isEmail==1">
 				<view class="title">验证码</view>
 				<input placeholder="填写新邮箱验证码" v-model="code" name="input"></input>
-				<view class="sendcode text-blue" v-if="show" @tap="RegSendCode">发送</view>
+				<view class="sendcode text-shojo" v-if="show" @tap="RegSendCode">发送</view>
 				<view class="sendcode text-gray" v-if="!show">{{ times }}s</view>
 			</view>
 			<!--  #ifdef MP -->

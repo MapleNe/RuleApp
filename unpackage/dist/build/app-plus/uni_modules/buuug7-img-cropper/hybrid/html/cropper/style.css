@@ -45,13 +45,13 @@
 }
 
 .btn.primary {
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #FB7299;
+  border-color: #FB7299;
   color: #fff;
 }
 .btn.primary:hover {
   text-decoration: none;
-  background-color: #0062cc;
+  background-color: #Fb729f;
 }
 
 .btn.outline {
@@ -141,6 +141,7 @@ img {
 	background: #fff;
 	width: 200px;
 	height: 200px;
+	border-radius: 50%;
 	margin:0px auto;
 	display: flex;
 	justify-content: center;

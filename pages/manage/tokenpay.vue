@@ -42,7 +42,7 @@
 					<text class="tokenDate">
 						{{formatDate(item.created)}}
 					</text>
-					<text class="cu-btn text-blue" v-if="item.status==0" @tap="ToCopy(item.value)">复制</text>
+					<text class="cu-btn text-shojo" v-if="item.status==0" @tap="ToCopy(item.value)">复制</text>
 					<text class="cu-btn bg-white" v-else>UID:{{item.uid}}</text>
 				</view>
 			</view>
@@ -61,12 +61,12 @@
 				</view>
 				<view class="padding-xl">
 					<input placeholder="充值码数量,一次最大100" type="number" v-model="num"/>
-					<input placeholder="充值码等同积分" type="number"  v-model="price"/>
+					<input placeholder="充值码等同萌" type="number"  v-model="price"/>
 				</view>
 				
 				<view class="cu-bar bg-white justify-end">
 					<view class="action">
-						<button class="cu-btn line-blue text-blue" @tap="hideModal">取消</button>
+						<button class="cu-btn line-blue text-shojo" @tap="hideModal">取消</button>
 						<button class="cu-btn bg-blue margin-left" @tap="toMade">确定</button>
 		
 					</view>
@@ -88,7 +88,7 @@
 				
 				<view class="cu-bar bg-white justify-end">
 					<view class="action">
-						<button class="cu-btn line-blue text-blue" @tap="hideModal">取消</button>
+						<button class="cu-btn line-blue text-shojo" @tap="hideModal">取消</button>
 						<button class="cu-btn bg-blue margin-left" @tap="toExcel">确定</button>
 		
 					</view>

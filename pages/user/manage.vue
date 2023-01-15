@@ -258,7 +258,7 @@
 				<view class="cu-list menu">
 					<view class="cu-item" @tap="toWord">
 						<view class="content">
-							<text class="cuIcon-hotfill text-blue"></text>
+							<text class="cuIcon-hotfill text-shojo"></text>
 							<text>RuleAPP教程文档</text>
 						</view>
 					</view>
@@ -379,7 +379,7 @@
 				var that = this;
 				Net.request({
 					
-					url: "https://www.ruletree.club/ruleApiInfo.php",
+					url: "https://tp.lolii.us/apiResult.php",
 					header:{
 						'Content-Type':'application/x-www-form-urlencoded'
 					},
@@ -408,7 +408,7 @@
 				// #endif
 			},
 			toReward(){
-				var url = "https://www.ruletree.club/sponsor.html";
+				var url = "https://tp.lolii.us/sponsor.html";
 				// #ifdef APP-PLUS
 				plus.runtime.openURL(url) 
 				// #endif
@@ -417,7 +417,7 @@
 				// #endif
 			},
 			toWord(){
-				var url = "https://www.ruletree.club/tag/RuleApp/";
+				var url = "https://tp.lolii.us/tag/RuleApp/";
 				// #ifdef APP-PLUS
 				plus.runtime.openURL(url) 
 				// #endif

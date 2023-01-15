@@ -6,7 +6,7 @@
 					<text class="cuIcon-search"></text>
 				</view>
 				<view class="content text-bold" :style="[{top:StatusBar + 'px'}]">
-					发现
+					动态
 				</view>
 				<!--  #ifdef H5 || APP-PLUS -->
 				<view class="action header-btn">
@@ -23,16 +23,16 @@
 		<view class="data-box">
 			<view class="cu-bar bg-white">
 				<view class="action data-box-title">
-					<text class="cuIcon-titles text-rule"></text> 排行榜
+					<text class="cuIcon-titles text-rule"></text> 热门话题
 				</view>
-				<view class="action more" @tap='toTopContents("排行榜","commentsNum")'>
-					<text>更多热门</text><text class="cuIcon-right"></text>
+				<view class="action more" @tap='toTopContents("热门话题","commentsNum")'>
+					<text>更多</text><text class="cuIcon-right"></text>
 				</view>
 				
 			</view>
 			<view class="top">
 				<view class="top-box"  v-for="(item,index) in topList" :key="index" @tap="toInfo(item)">
-					<text>{{index+1}}</text>{{item.title}}
+					<text>#</text>{{item.title}}
 				</view>
 			</view>
 		</view>
@@ -73,7 +73,7 @@
 					</waves>
 				</view>
 				<!--  #endif -->
-				<view class="index-sort-box">
+				<!-- <view class="index-sort-box">
 					<waves itemClass="butclass">
 						<view class="index-sort-main" @tap="goPage('/pages/contents/foreverblog')">
 							<view class="index-sort-i toClub">
@@ -84,7 +84,7 @@
 							</view>
 						</view>
 					</waves>
-				</view>
+				</view> -->
 				<!--  #ifdef MP -->
 				<view class="index-sort-box">
 					<waves itemClass="butclass">
@@ -99,7 +99,7 @@
 					</waves>
 				</view>
 				<!--  #endif -->
-				<view class="index-sort-box">
+				<!-- <view class="index-sort-box">
 					<waves itemClass="butclass">
 						<view class="index-sort-main" @tap="goPage('/pages/home/tool')">
 							<view class="index-sort-i" style="background-color: #7d7c7c;">
@@ -110,7 +110,7 @@
 							</view>
 						</view>
 					</waves>
-				</view>
+				</view> -->
 			</view>
 		</view>
 		<view class="data-box">
@@ -119,7 +119,7 @@
 					<text class="cuIcon-titles text-rule"></text> 推荐文章
 				</view>
 				<view class="action more" @tap="toRecommend">
-					<text>阅读更多</text><text class="cuIcon-right"></text>
+					<text>更多</text><text class="cuIcon-right"></text>
 				</view>
 			</view>
 			<view class="cu-card article no-card">
@@ -131,7 +131,7 @@
 						<view class="desc">
 							<view class="text-content">{{replaceSpecialChar(item.title)}}</view>
 							<view class="text-i">
-								<view class="cu-tag bg-blue light sm round" v-if="item.category.length>0">{{item.category[0].name}}</view>
+								<view class="cu-tag bg-shojo light sm round" v-if="item.category.length>0">{{item.category[0].name}}</view>
 								<view class="cu-tag data-time">{{formatDate(item.created)}}</view>
 							</view>
 						</view>
@@ -163,7 +163,7 @@
 					<text class="cuIcon-titles text-rule"></text> 标签云
 				</view>
 				<view class="action more" @tap="toAlltag">
-					<text>更多标签</text><text class="cuIcon-right"></text>
+					<text>更多</text><text class="cuIcon-right"></text>
 				</view>
 			</view>
 			<view class="tags">

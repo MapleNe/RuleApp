@@ -28,8 +28,8 @@
 								
 							</view>
 							<view class="order-btn">
-								<text class="text-red">{{item.num}} 积分 = ￥ {{item.num/scale}}</text>
-								<text class="text-blue order-status" v-if="item.cid==-1">审核中</text>
+								<text class="text-red">{{item.num}} 萌 = ￥ {{item.num/scale}}</text>
+								<text class="text-shojo order-status" v-if="item.cid==-1">审核中</text>
 								<text class="text-green order-status" v-if="item.cid==0">已成功</text>
 								<text class="text-red order-status" v-if="item.cid==-2">被拒绝</text>
 							</view>

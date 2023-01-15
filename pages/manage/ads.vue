@@ -42,7 +42,7 @@
 						{{item.name}}
 					</view>
 					<view class="myAds-time">
-						预计到期时间：<text class="text-blue">{{formatDate(item.close)}}</text>
+						预计到期时间：<text class="text-shojo">{{formatDate(item.close)}}</text>
 						<text class="text-green">{{getType(item.type)}}</text>
 					</view>
 					<view class="myAds-concent">
@@ -56,8 +56,8 @@
 					<view class="myAds-btn">
 						<text class="text-red radius" @tap="toAudit(item.aid)" v-if="status==0">快捷审核</text>
 						<text class="text-green radius" @tap="toRenewal(item)" v-if="status==1">续期</text>
-						<text class="text-blue radius" @tap="goEdit(item)">编辑</text>
-						<text class="text-blue radius" @tap="toDelete(item.aid)">删除</text>
+						<text class="text-shojo radius" @tap="goEdit(item)">编辑</text>
+						<text class="text-shojo radius" @tap="toDelete(item.aid)">删除</text>
 					</view>
 				</view>
 				

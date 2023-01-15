@@ -46,7 +46,7 @@
 							{{item.title}}
 						</view>
 						<view class="shop-info text-center">
-							<text class="shop-btn text-blue" v-if="item.status==0" @tap="getUserInfo(item.uid)">用户</text>
+							<text class="shop-btn text-shojo" v-if="item.status==0" @tap="getUserInfo(item.uid)">用户</text>
 							<text class="shop-btn text-yellow" v-if="item.status==0" @tap="auditShop(item.id)">审核</text>
 							<text class="shop-btn text-red" @tap="deleteShop(item.id)" v-if="group=='administrator'">删除</text>
 						</view>

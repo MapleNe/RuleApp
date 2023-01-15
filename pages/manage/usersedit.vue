@@ -23,10 +23,10 @@
 				<input name="input" disabled="disabled" :value="name"></input>
 			</view>
 			<view class="cu-form-group">
-				<view class="title">用户积分</view>
+				<view class="title">用户萌</view>
 				<input name="input" disabled="disabled" :value="assets"></input>
 				<view class="action">
-					<text class="text-blue" @tap="recharge">充扣</text>
+					<text class="text-shojo" @tap="recharge">充扣</text>
 				</view>
 			</view>
 			<view class="cu-form-group margin-top">
@@ -49,7 +49,7 @@
 				<view class="title">权限设置</view>
 				<input :value="groupText" name="input" disabled="true"></input>
 				<view class="action">
-					<text class="text-blue" @tap="showModal" data-target="groupModal">修改</text>
+					<text class="text-shojo" @tap="showModal" data-target="groupModal">修改</text>
 				</view>
 			</view>
 			<view class="cu-form-group margin-top">

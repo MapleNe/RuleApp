@@ -29,7 +29,7 @@
 				{{replaceSpecialChar(title)}}
 			</view>
 			<view class="info-tyle">
-				<text class="text-blue" v-if="category.length>0" @tap="toCategoryContents(category)">{{category[0].name}}</text>
+				<text class="text-shojo" v-if="category.length>0" @tap="toCategoryContents(category)">{{category[0].name}}</text>
 				<text class="text-gray" v-if="category.length==0">暂无分类</text>
 				<text class="info-date" v-if="created!=''">{{formatDate(created)}}
 				</text>
@@ -53,10 +53,10 @@
 								<!--  #ifdef H5 || APP-PLUS -->
 								<block v-if="userInfo.isvip==1">
 									<block v-if="userInfo.vip==1">
-										<text class="isVIP bg-gradual-red">VIP</text>
+										<text class="isVIP bg-shojo">大会员</text>
 									</block>
 									<block v-else>
-										<text class="isVIP bg-yellow">VIP</text>
+										<text class="isVIP bg-shojo">大会员</text>
 									</block>
 								</block>
 								<!--  #endif -->
@@ -92,13 +92,13 @@
 							<block v-if="item.type==1">
 								<view class="shop-tool text-center">
 									<view class="shop-name">
-										实体商品
+										实体
 									</view>
 									<image :src="item.imgurl"
 									 mode="aspectFill"></image>
 									<view class="text-content">{{item.title}}</view>
 									<view class="tool-price" v-if="isBuy==0">
-										<text class="text-red text-bold">{{item.price}} 积分</text><text class="margin-left-sm text-sm">VIP只需</text><text class="text-yellow text-bold">{{parseInt(item.price * item.vipDiscount)}} 积分</text>
+										<text class="text-red text-bold">{{item.price}} 萌</text><text class="margin-left-sm text-sm">大会员只需</text><text class="text-yellow text-bold">{{parseInt(item.price * item.vipDiscount)}} 积分</text>
 									</view>
 									<view class="tool-price">
 										<text class="cu-btn bg-blue" @tap="shopBuy(item.id)">立即下单</text>
@@ -116,7 +116,7 @@
 									 mode="aspectFill"></image>
 									<view class="text-content">{{item.title}}</view>
 									<view class="tool-price" v-if="isBuy==0">
-										<text class="text-red text-bold">{{item.price}} 积分</text><text class="margin-left-sm text-sm">VIP只需</text><text class="text-yellow text-bold">{{parseInt(item.price * item.vipDiscount)}} 积分</text>
+										<text class="text-red text-bold">{{item.price}} 萌</text><text class="margin-left-sm text-sm">大会员只需</text><text class="text-yellow text-bold">{{parseInt(item.price * item.vipDiscount)}} 积分</text>
 									</view>
 									<view class="tool-price" v-if="isBuy==1">
 										<text class="cu-btn bg-blue" @tap="toShopValue(item.id,item.type)">查看收费内容</text>
@@ -132,13 +132,13 @@
 							<block v-if="item.type==3">
 								<view class="shop-tool text-center">
 									<view class="shop-name">
-										软件工具
+										软件
 									</view>
 									<image :src="item.imgurl"
 									 mode="aspectFill"></image>
 									<view class="text-content">{{item.title}}</view>
 									<view class="tool-price" v-if="isBuy==0">
-										<text class="text-red text-bold">{{item.price}} 积分</text><text class="margin-left-sm text-sm">VIP只需</text><text class="text-yellow text-bold">{{parseInt(item.price * item.vipDiscount)}} 积分</text>
+										<text class="text-red text-bold">{{item.price}} 萌</text><text class="margin-left-sm text-sm">大会员只需</text><text class="text-yellow text-bold">{{parseInt(item.price * item.vipDiscount)}} 积分</text>
 									</view>
 									<view class="tool-price" v-if="isBuy==1">
 										<text class="cu-btn bg-blue" @tap="toShopValue(item.id,item.type)">查看收费内容</text>
@@ -154,10 +154,10 @@
 							<block v-if="item.type==4">
 								<view class="shop-tool text-center">
 									<view class="shop-name">
-										付费阅读
+										阅读
 									</view>
 									<view class="tool-price" v-if="isBuy==0">
-										<text class="text-red text-bold">{{item.price}} 积分</text><text class="margin-left-sm text-sm">VIP只需</text><text class="text-yellow text-bold">{{parseInt(item.price * item.vipDiscount)}} 积分</text>
+										<text class="text-red text-bold">{{item.price}} 萌</text><text class="margin-left-sm text-sm">大会员只需</text><text class="text-yellow text-bold">{{parseInt(item.price * item.vipDiscount)}} 积分</text>
 									</view>
 									<view class="tool-price" v-if="isBuy==1">
 										<text class="cu-btn bg-blue" @tap="toShopValue(item.id,item.type)">查看收费内容</text>
@@ -193,7 +193,7 @@
 							<text>点赞( {{formatNumber(likes)}} )</text>
 						</view>
 						<view class="content-btn-i" @tap="toLikes" v-else>
-							<text class="cuIcon-appreciatefill text-blue btn-i"></text>
+							<text class="cuIcon-appreciatefill text-shojo btn-i"></text>
 							<text>点赞( {{formatNumber(likes)}} )</text>
 						</view>
 					</view>
@@ -244,7 +244,7 @@
 							<view class="cu-item">
 								<view class="cu-avatar round" @tap="toUserContents(item)" :style="item.style"></view>
 								<view class="content">
-									<view class="text-grey">
+									<view class="text-black">
 										{{item.author}}
 										<!--  #ifdef H5 || APP-PLUS -->
 										<text class="userlv" :style="getUserLvStyle(item.lv)">{{getUserLv(item.lv)}}</text>
@@ -253,10 +253,10 @@
 										<!--  #ifdef H5 || APP-PLUS -->
 										<block v-if="item.isvip>1">
 											<block v-if="item.vip==1">
-												<text class="isVIP bg-gradual-red">VIP</text>
+												<text class="isVIP bg-shojo">大会员</text>
 											</block>
 											<block v-else>
-												<text class="isVIP bg-yellow">VIP</text>
+												<text class="isVIP bg-shojo">大会员</text>
 											</block>
 										</block>
 										<!--  #endif -->
@@ -277,8 +277,8 @@
 										</view>
 									</view>
 									<view class="comment-operation"  v-if="group=='administrator'||group=='editor'">
-										<text class="text-black" @tap="toBan(item.authorId)">封禁</text>
-										<text class="text-red" @tap="toDelete(item.coid)">删除</text>
+										<text class="cuIcon-warnfill" @tap="toBan(item.authorId)">封禁</text>
+										<text class="cuIcon-deletefill text-red" @tap="toDelete(item.coid)">删除</text>
 									</view>
 								</view>
 							</view>
@@ -300,8 +300,8 @@
 		<view class="cu-modal bottom-modal" :class="modalName=='ChooseModal'?'show':''" @tap="hideModal">
 			<view class="cu-dialog" @tap.stop="">
 				<view class="cu-bar bg-white">
-					<view class="action text-blue" @tap="hideModal">取消</view>
-					<view class="action text-green" @tap="toReward">确定</view>
+					<view class="action text-shojo" @tap="hideModal">取消</view>
+					<view class="action text-shojo" @tap="toReward">确定</view>
 				</view>
 				<view class="grid col-3 padding-sm">
 					<view v-for="(item,index) in checkbox" class="padding-xs" :key="index">
@@ -324,17 +324,17 @@
 		<view class="info-footer grid col-2">
 			<view class="info-footer-input">
 				<view class="info-input-box"  @tap="commentsAdd(title,0,0)">
-					<text class="cuIcon-writefill"></text>留下评论&吐槽
+					<text class="cuIcon-writefill"></text>女装大佬的独立宣言？
 				</view>
 			</view>
 			<view class="info-footer-btn">
 				<text class="cuIcon-appreciate" @tap="toLikes" v-if="isLikes==0"></text>
-				<text class="cuIcon-appreciatefill text-blue" @tap="toLikes" v-else></text>
+				<text class="cuIcon-appreciatefill text-shojo" @tap="toLikes" v-else></text>
 				<text class="cuIcon-favor" @tap="toMark" v-if="isMark==0"></text>
-				<text class="cuIcon-favorfill text-orange" @tap="rmMark" v-else></text>
+				<text class="cuIcon-favorfill text-shojo" @tap="rmMark" v-else></text>
 				<!-- <text class="cuIcon-recharge"  @tap="toReward"></text> -->
 				<text class="cuIcon-recharge"  @tap="showModal" data-target="ChooseModal"></text>
-				<text class="cuIcon-share text-blue" @tap="ToShare"></text>
+				<text class="cuIcon-share text-shojo" @tap="ToShare"></text>
 				
 				
 			</view>
@@ -403,38 +403,14 @@
 				modalName: null,
 				checkbox: [{
 					value: 0,
-					name: '5积分',
-					num:5,
+					name: '1萌',
+					num:1,
 					checked: false,
 					hot: false,
 				}, {
 					value: 1,
-					name: '10积分',
+					name: '2萌',
 					num:10,
-					checked: false,
-					hot: false,
-				}, {
-					value: 2,
-					name: '30积分',
-					num:30,
-					checked: false,
-					hot: false,
-				}, {
-					value: 3,
-					name: '50积分',
-					num:50,
-					checked: false,
-					hot: false,
-				}, {
-					value: 4,
-					name: '100积分',
-					num:100,
-					checked: false,
-					hot: false,
-				}, {
-					value: 5,
-					name: '200积分',
-					num:200,
 					checked: false,
 					hot: false,
 				}],
@@ -990,7 +966,7 @@
 						})
 						if(res.data.code==1){
 							uni.showToast({
-								title: "成功打赏 "+num+" 积分",
+								title: "成功打赏 "+num+"萌",
 								icon: 'none'
 							})
 						}

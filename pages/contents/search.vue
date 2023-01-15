@@ -17,7 +17,7 @@
 					<view class="search-close" v-if="searchText!=''" @tap="searchClose()"><text class="cuIcon-close"></text></view>
 				</view>
 				<view class="action">
-					<text class="text-blue" @tap="searchTag()">搜索</text>
+					<text class="text-shojo" @tap="searchTag()">搜索</text>
 				</view>
 				<!--  #endif -->
 			</view>

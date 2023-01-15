@@ -17,7 +17,7 @@
 				<!--  #endif -->
 				
 				<!--  #ifdef H5 || APP-PLUS -->
-				<view class="cu-avatar round" @tap="goUserInfo()" :style="userInfo.style" v-if="token!=''"></view>
+				<view class="cu-avatar round" @tap="toLink('/pages/user/useredit')" :style="userInfo.style" v-if="token!=''"></view>
 				<view class="cu-avatar round" @tap="goUserInfo()" v-else>
 					<text class="home-noLogin">登录</text>
 				</view>
@@ -37,16 +37,17 @@
 		</view>
 		<view class="home-nav metaList" :style="'top:'+CustomBar+'px'">
 			<scroll-view scroll-x class="bg-white nav " scroll-with-animation :scroll-left="scrollLeft" >
-				<view class="cu-item" :class="item.mid==TabCur?'text-blue cur':''" v-for="(item,index) in metaList" :key="index" @tap="tabSelect" :data-id="item.mid" v-if="item.parent==0">
+				<view class="cu-item" :class="item.mid==TabCur?'text-shojo cur':''" v-for="(item,index) in metaList" :key="index" @tap="tabSelect" :data-id="item.mid" v-if="item.parent==0">
 					{{item.name}}
 				</view>
 			</scroll-view>
 			<view class="goCategory" @tap="goCategory">
-				<text class="cuIcon-more"></text>
+				<text class="cuIcon-moreandroid"></text>
 			</view>
 		</view>
-		<view :style="[{padding:NavBar+40 + 'px 10px 0px 10px'}]"></view>
-		<block v-if="TabCur==0">
+		<view :style="[{padding:NavBar+44+ 'px 10px 0px 10px'}]"></view>
+		<view class="contentapp">
+			<block v-if="TabCur==0">
 			<swiper class="screen-swiper" :class="dotStyle?'square-dot':'round-dot'" :indicator-dots="true" :circular="true"
 			 :autoplay="true" interval="5000" duration="500">
 				<swiper-item v-for="(item,index) in swiperList" :key="index"  @tap="toInfo(item)">
@@ -57,9 +58,10 @@
 							<view class="swiper-title">
 								{{item.title}}
 							</view>
-							<view class="swiper-intro">
+							<!-- 轮播摘要 -->
+							<!-- <view class="swiper-intro">
 								{{item.intro}}
-							</view>
+							</view> -->
 						</view>
 					</view>
 					
@@ -115,7 +117,7 @@
 								<text class="cuIcon-shopfill" style="color:  #ff3333;"></text>
 							</view>
 							<view class="index-sort-text">
-								积分商城
+								萌商城
 							</view>
 						</view>
 					</waves>
@@ -149,13 +151,13 @@
 				</view>
 			</view>
 			
-			<view class="data-box">
-				<view class="cu-bar bg-white">
+			<view class="data-box top-radius">
+				<view class="cu-bar bg-white top-radius">
 					<view class="action data-box-title">
 						<text class="cuIcon-titles text-rule"></text> 热门专题
 					</view>
 					<view class="action more" @tap="toMetas">
-						<text>查看全部</text><text class="cuIcon-right"></text>
+						<text>全部</text><text class="cuIcon-right"></text>
 					</view>
 				</view>
 				<view class="topic grid col-2">
@@ -173,13 +175,13 @@
 			<image :src="bannerAdsInfo.img" mode="widthFix" @tap="goAds(bannerAdsInfo)"></image>
 		</view>
 		<!--底下改成滑动形式-->
-		<view class="all-box" :style="TabCur!=0?'margin-top:0;':''">
-			<view class="cu-bar bg-white" v-if="TabCur==0">
+		<view class="all-box top-radius" :style="TabCur!=0?'margin-top:0;':''">
+			<view class="cu-bar bg-white top-radius" v-if="TabCur==0">
 				<view class="action data-box-title">
 					<text class="cuIcon-titles text-rule"></text>最新文章
 				</view>
-				<view class="action more" @tap='toTopContents("排行榜","commentsNum")'>
-					<text>阅读更多</text><text class="cuIcon-right"></text>
+				<view class="action more" @tap='toTopContents("最新文章","commentsNum")'>
+					<text>更多</text><text class="cuIcon-right"></text>
 				</view>
 			</view>
 			<view class="cu-card article no-card topContents" v-for="(item,index) in topContents" :key="item.cid"  @tap="toInfo(item)" v-if="TabCur==0&&dataLoad">
@@ -355,7 +357,7 @@
 							<view class="cu-tag data-author"><text class="cuIcon-appreciatefill"></text>{{item.likes}}</view>
 							<view class="cu-tag data-author"><text class="cuIcon-messagefill"></text>{{item.commentsNum}}</view>
 						
-							<view class="cu-tag data-time">{{formatDate(item.created)}}</view>
+							<!-- <view class="cu-tag data-time">{{formatDate(item.created)}}</view> -->
 						</view>
 					</view>
 				</view>
@@ -366,6 +368,7 @@
 			<view class="load-more" @tap="loadMore" v-if="dataLoad">
 				<text>{{moreText}}</text>
 			</view>
+		</view>
 		</view>
 		<!--加载遮罩-->
 		<view class="loading" v-if="isLoading==0">

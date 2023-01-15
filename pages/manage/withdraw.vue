@@ -39,8 +39,8 @@
 								<text class="order-type">UID：{{item.uid}}</text>
 							</view>
 							<view class="order-btn">
-								<text class="text-red">{{item.num}} 积分 = ￥ {{item.num/scale}}</text>
-								<text class="text-blue order-status" @tap="toPay(item.pay)">用户收款码</text>
+								<text class="text-red">{{item.num}} 萌 = ￥ {{item.num/scale}}</text>
+								<text class="text-shojo order-status" @tap="toPay(item.pay)">用户收款码</text>
 							</view>
 							<view class="order-kill" v-if="item.cid==-1">
 								<text class="cu-btn text-green radius" @tap="toStatus(item.id,1)">已打款</text>

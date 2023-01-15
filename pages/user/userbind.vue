@@ -19,7 +19,7 @@
 				</view>
 				<view class="action" @tap="toQQBind">
 					<text class="text-gray" v-if="userBind.qqBind==0">未绑定</text>
-					<text class="text-blue" v-else>已绑定</text>
+					<text class="text-shojo" v-else>已绑定</text>
 					<text class="cuIcon-right"></text>
 				</view>
 			</view>
@@ -30,7 +30,7 @@
 				</view>
 				<view class="action" @tap="toWexinBind">
 					<text class="text-gray" v-if="userBind.weixinBind==0">未绑定</text>
-					<text class="text-blue" v-else>已绑定</text>
+					<text class="text-shojo" v-else>已绑定</text>
 					<text class="cuIcon-right"></text>
 				</view>
 			</view>
@@ -41,7 +41,7 @@
 				</view>
 				<view class="action" @tap="toWeiboBind">
 					<text class="text-gray" v-if="userBind.weiboBind==0">未绑定</text>
-					<text class="text-blue" v-else>已绑定</text>
+					<text class="text-shojo" v-else>已绑定</text>
 					<text class="cuIcon-right"></text>
 				</view>
 			</view>

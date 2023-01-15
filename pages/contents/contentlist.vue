@@ -17,14 +17,14 @@
 		</view>
 		<view :style="[{padding:NavBar + 'px 10px 0px 10px'}]"></view>
 		<scroll-view scroll-x class="bg-white nav metaList" scroll-with-animation :scroll-left="scrollLeft" style="margin-top: 20upx;" v-if="type=='all'">
-			<view class="cu-item" :class="item.mid==TabCur?'text-blue cur':''" v-for="(item,index) in metaList" :key="index" @tap="tabSelect" :data-id="item.mid" v-if="item.parent==0">
+			<view class="cu-item" :class="item.mid==TabCur?'text-shojo cur':''" v-for="(item,index) in metaList" :key="index" @tap="tabSelect" :data-id="item.mid" v-if="item.parent==0">
 				{{item.name}}
 			</view>
 		</scroll-view>
 		
 		<view class="cu-card article no-card">
 		<scroll-view scroll-x class="bg-white nav metaList" scroll-with-animation :scroll-left="scrollLeft" style="margin-top: 20upx;" v-if="type=='top'">
-			<view class="cu-item" :class="item.order==orderCur?'text-blue cur':''" v-for="(item,index) in topList" :key="index" @tap="topSelect" :data-order="item.order">
+			<view class="cu-item" :class="item.order==orderCur?'text-shojo cur':''" v-for="(item,index) in topList" :key="index" @tap="topSelect" :data-order="item.order">
 				{{item.name}}
 			</view>
 		</scroll-view>
@@ -441,7 +441,7 @@
 								
 							
 							}else{
-								that.moreText="没有更多文章了";
+								that.moreText="已经一滴都没有了~";
 							}
 						}
 						var timer = setTimeout(function() {
@@ -516,7 +516,7 @@
 								
 								localStorage.setItem('contentsList_'+meta,JSON.stringify(that.contentsList));
 							}else{
-								that.moreText="没有更多文章了";
+								that.moreText="已经一滴都没有了~";
 							}
 						}
 						var timer = setTimeout(function() {

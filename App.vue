@@ -283,12 +283,12 @@
 		border-radius: 0upx !important;
 	}
 	.uni-swiper-dot.uni-swiper-dot-active{
-		background-color: #0081FF !important;
+		background-color: #FB7299 !important;
 		opacity: 0.8;
 		
 	}
 	.uni-swiper-dot.uni-swiper-dot-active::after{
-		background-color: #0081FF !important;
+		background-color: #FB7299 !important;
 		height: 8upx !important;
 	}
 	.uni-swiper-dots-horizontal{

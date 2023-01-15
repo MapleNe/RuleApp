@@ -6,14 +6,14 @@
 					<text class="cuIcon-search"></text>
 				</view>
 				<view class="content text-bold" :style="[{top:StatusBar + 'px'}]">
-					账户
+					个人信息
 				</view>
 				<!--  #ifdef H5 -->
 				<view class="action header-btn">
 					<text class="cuIcon-notice" @tap="toLink('/pages/user/inbox')">
 						<text class="noticeSum bg-red" v-if="noticeSum>0">{{noticeSum}}</text>
 					</text>
-					<text class="cuIcon-clothes" @tap="goStyle"></text>
+					<!-- <text class="cuIcon-clothes" @tap="goStyle"></text> -->
 					<!-- <text class="cuIcon-search" @tap="toSearch"></text> -->
 				</view>
 				<!--  #endif -->
@@ -58,14 +58,14 @@
 							<!--  #ifdef H5 || APP-PLUS -->
 							<block v-if="userInfo.isvip==1">
 								<block v-if="userInfo.vip==1">
-									<text class="isVIP bg-gradual-red">VIP</text>
+									<text class="isVIP bg-shojo">大会员</text>
 								</block>
 								<block v-else>
-									<text class="isVIP bg-yellow">VIP</text>
+									<text class="isVIP bg-shojo">大会员</text>
 								</block>
 							</block>
 							<block v-else>
-								<text class="userlv bg-gray isVIP">VIP</text>
+								<text class="userlv bg-gray isVIP">大会员</text>
 							</block>
 							<!--  #endif -->
 						</view>
@@ -98,7 +98,7 @@
 						</view>
 						<view class="user-data-box" @tap="toLink('/pages/user/assets')">
 							<view class="user-data-value">{{formatNumber(userData.assets)}}</view>
-							<view class="user-data-title">积分</view>
+							<view class="user-data-title">萌</view>
 						</view>
 					</view>
 					<!--  #endif -->
@@ -235,7 +235,7 @@
 			<view class="cu-list menu">
 				<view class="cu-item" @tap="toSetUp">
 					<view class="content">
-						<text class="cuIcon-settingsfill text-blue"></text>
+						<text class="cuIcon-settingsfill text-shojo"></text>
 						<text>系统设置</text>
 					</view>
 					<view class="action">
@@ -245,7 +245,7 @@
 				<!--  #ifdef H5 || APP-PLUS -->
 				<view class="cu-item" @tap="toMedia">
 					<view class="content">
-						<text class="cuIcon-newfill text-blue"></text>
+						<text class="cuIcon-newfill text-shojo"></text>
 						<text>社交媒体</text>
 					</view>
 					<view class="action">
@@ -255,7 +255,7 @@
 				<!--  #endif -->
 				<view class="cu-item" @tap="toPage('关于平台',aboutme)">
 					<view class="content">
-						<text class="cuIcon-servicefill text-blue"></text>
+						<text class="cuIcon-servicefill text-shojo"></text>
 						<text>关于我们</text>
 					</view>
 					<view class="action">

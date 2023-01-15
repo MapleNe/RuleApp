@@ -16,11 +16,11 @@
 		<view class="data-box userrecharge">
 			<view class="userrecharge-type">
 				<!--  #ifdef H5 || APP-PLUS -->
-				<text class="cu-btn text-blue radius" @tap="toPayType(0)" :class="payType=='0'?'active':''">支付宝</text>
+				<text class="cu-btn text-shojo radius" @tap="toPayType(0)" :class="payType=='0'?'active':''">支付宝</text>
 				<!--  #endif -->
-				<text class="cu-btn text-blue radius" @tap="toPayType(1)" :class="payType=='1'?'active':''">微信支付</text>
-				<text class="cu-btn text-blue radius" @tap="toPayType(2)" :class="payType=='2'?'active':''">卡密充值</text>
-				<text class="cu-btn text-blue radius" @tap="toPayType(3)" :class="payType=='3'?'active':''">易支付</text>
+				<text class="cu-btn text-shojo radius" @tap="toPayType(1)" :class="payType=='1'?'active':''">微信支付</text>
+				<text class="cu-btn text-shojo radius" @tap="toPayType(2)" :class="payType=='2'?'active':''">卡密充值</text>
+				<text class="cu-btn text-shojo radius" @tap="toPayType(3)" :class="payType=='3'?'active':''">易支付</text>
 			</view>
 			<block  v-if="payType==1||payType==0">
 				<block v-if="isToPay==0">
@@ -71,7 +71,7 @@
 					1.如果支付软件未成功开启，可尝试保存二维码再进行扫码支付，部分设备可能无权限打开支付宝或微信。
 				</view>
 				<view class="userrecharge-intro-text">
-					2.充值金额与网站积分的比例为<text class="text-red text-bold"> 1:{{scale}} </text>，最低充值金额<text class="text-red text-bold"> 5 </text>元。
+					2.充值金额与网站萌的比例为<text class="text-red text-bold"> 1:{{scale}} </text>，最低充值金额<text class="text-red text-bold"> 5 </text>元。
 				</view>
 				<view class="userrecharge-intro-text">
 					3.如果充值金额未到账，请查看账户中的充值记录，并立即反馈。
@@ -88,7 +88,7 @@
 					1.请填写正确的充值码，注意空格与特殊符号。
 				</view>
 				<view class="userrecharge-intro-text">
-					2.充值金额与网站积分的比例为<text class="text-red text-bold"> 1:{{scale}} </text>。
+					2.充值金额与网站萌的比例为<text class="text-red text-bold"> 1:{{scale}} </text>。
 				</view>
 				<view class="userrecharge-intro-text">
 					3.充值码在进行充值操作后，将失效。
@@ -103,7 +103,7 @@
 				</view>
 				
 				<view class="userrecharge-intro-text">
-					2.充值金额与网站积分的比例为<text class="text-red text-bold"> 1:{{scale}} </text>，最低充值金额<text class="text-red text-bold"> 5 </text>元。
+					2.充值金额与网站萌的比例为<text class="text-red text-bold"> 1:{{scale}} </text>，最低充值金额<text class="text-red text-bold"> 5 </text>元。
 				</view>
 				<view class="userrecharge-intro-text">
 					3.如果充值金额未到账，请查看账户中的充值记录，并立即反馈。

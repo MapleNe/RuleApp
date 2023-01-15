@@ -22,7 +22,7 @@
 				<image :src="avatar"></image>
 				<!--  #ifdef H5 || APP-PLUS -->
 				<!-- <text class="cu-btn bg-blue radius" @tap="showModal" data-target="DialogModal1">设置头像</text> -->
-				<text class="cu-btn bg-blue radius" @tap="toAvatar" >设置头像</text>
+				<text class="cu-btn bg-shojo radius" @tap="toAvatar" >设置头像</text>
 				<!--  #endif -->
 			</view>
 			<view class="cu-form-group">
@@ -36,14 +36,14 @@
 			<view class="cu-form-group">
 				<view class="title">邮箱</view>
 				<input placeholder="未设置" disabled="disabled" name="input" :value="mail"></input>
-				<view class="text-blue" @tap="toEmail">修改</view>
+				<view class="text-shojo" @tap="toEmail">修改</view>
 			</view>
 			<view class="cu-form-group">
 				<view class="title">网址</view>
 				<input placeholder="请输入网址" name="input" v-model="url"></input>
 			</view>
 			<view class="cu-form-group align-start">
-				<view class="title">个人简介</view>
+				<view class="title">简介</view>
 				<textarea v-model="introduce"  placeholder="输入个人简介"></textarea>
 			</view>
 			<view class="cu-form-group margin-top">
@@ -59,7 +59,7 @@
 		<view class="cu-list menu">
 			<view class="cu-item margin-top" @tap="toBind">
 				<view class="content">
-					<text>社会化登陆绑定</text>
+					<text>第三方绑定</text>
 				</view>
 				<view class="action">
 					<text class="cuIcon-right"></text>
@@ -67,7 +67,7 @@
 			</view>
 			<view class="cu-item" @tap="toAddress">
 				<view class="content">
-					<text>收货地址设置</text>
+					<text>收货地址</text>
 				</view>
 				<view class="action">
 					<text class="cuIcon-right"></text>

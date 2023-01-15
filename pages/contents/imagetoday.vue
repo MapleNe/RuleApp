@@ -9,7 +9,7 @@
 					图库
 				</view>
 				<view class="action" @tap="toUrl('https://www.pexels.com/')">
-					<text class="text-blue">Pexels</text>
+					<text class="text-shojo">Pexels</text>
 				</view>
 			</view>
 		</view>

@@ -22,7 +22,7 @@
 				<view class="title">商品价格</view>
 				<input placeholder="输入商品价格" type="number" name="input" v-model="price"    @focus="ToisText(0)" @blur="ToisText(0)" :adjust-position="false" :focus="false"></input>
 				<view class="action">
-					<text class="text-red" @tap="showModal" data-target="RadioModal">设置VIP折扣</text>
+					<text class="text-red" @tap="showModal" data-target="RadioModal">设置大会员折扣</text>
 				</view>
 			</view>
 			<view class="cu-form-group">
@@ -104,7 +104,7 @@
 				</view>
 				<view class="cu-bar bg-white justify-end">
 					<view class="action">
-						<button class="cu-btn line-blue text-blue" @tap="hideModal">取消</button>
+						<button class="cu-btn line-blue text-shojo" @tap="hideModal">取消</button>
 						<button class="cu-btn bg-blue margin-left" @tap="tolinks">确定</button>
 		
 					</view>
@@ -224,7 +224,7 @@
 						value:"0.1",
 					},
 					{
-						name:"VIP免费",
+						name:"大会员免费",
 						value:"0.0",
 					},
 				],

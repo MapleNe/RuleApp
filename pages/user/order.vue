@@ -35,9 +35,9 @@
 					<view class="order-time">{{formatDate(item.created)}}</view>
 				</view>
 				<view class="order-btn" v-if="item.shopInfo">
-					<text class="text-red">{{item.shopInfo.price}} 积分</text>
+					<text class="text-red">{{item.shopInfo.price}} 萌</text>
 					<text class="text-green margin-left" @tap="toMerchant(item.merchantEmail)">联系商家</text>
-					<text class="text-blue" @tap="toInfo(item.shopInfo)">查看收费内容</text>
+					<text class="text-shojo" @tap="toInfo(item.shopInfo)">查看收费内容</text>
 				</view>
 			</view>
 		</view>
@@ -50,7 +50,7 @@
 					</view>
 				</view>
 				<view class="padding-xl">
-					<text class="text-blue" @tap="ToCopy(merchantEmail)">{{merchantEmail}}</text>
+					<text class="text-shojo" @tap="ToCopy(merchantEmail)">{{merchantEmail}}</text>
 				</view>
 			</view>
 		</view>

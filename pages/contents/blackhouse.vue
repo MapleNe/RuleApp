@@ -28,10 +28,10 @@
 						<!--  #ifdef H5 || APP-PLUS -->
 						<block v-if="item.isvip>0">
 							<block v-if="item.vip==1">
-								<text class="isVIP bg-gradual-red">VIP</text>
+								<text class="isVIP bg-shojo">大会员</text>
 							</block>
 							<block v-else>
-								<text class="isVIP bg-yellow">VIP</text>
+								<text class="isVIP bg-shojo">大会员</text>
 							</block>
 						</block>
 						<!--  #endif -->
@@ -44,7 +44,7 @@
 					</view>
 				</view>
 				<view class="action" @tap="toUserContents(item.userJson)">
-					<view class="text-blue text-xs">详情</view>
+					<view class="text-shojo text-xs">详情</view>
 					
 				</view>
 			</view>

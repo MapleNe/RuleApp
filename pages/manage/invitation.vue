@@ -35,7 +35,7 @@
 					<text class="tokenDate">
 						{{formatDate(item.created)}}
 					</text>
-					<text class="cu-btn text-blue" @tap="ToCopy(item.code)">复制</text>
+					<text class="cu-btn text-shojo" @tap="ToCopy(item.code)">复制</text>
 					
 				</view>
 			</view>
@@ -58,7 +58,7 @@
 				
 				<view class="cu-bar bg-white justify-end">
 					<view class="action">
-						<button class="cu-btn line-blue text-blue" @tap="hideModal">取消</button>
+						<button class="cu-btn line-blue text-shojo" @tap="hideModal">取消</button>
 						<button class="cu-btn bg-blue margin-left" @tap="toMade">确定</button>
 		
 					</view>
@@ -80,7 +80,7 @@
 				
 				<view class="cu-bar bg-white justify-end">
 					<view class="action">
-						<button class="cu-btn line-blue text-blue" @tap="hideModal">取消</button>
+						<button class="cu-btn line-blue text-shojo" @tap="hideModal">取消</button>
 						<button class="cu-btn bg-blue margin-left" @tap="toExcel">确定</button>
 		
 					</view>
