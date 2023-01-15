@@ -3,14 +3,14 @@
 		<view class="header" :style="[{height:CustomBar + 'px'}]">
 			<view class="cu-bar bg-white" :style="{'height': CustomBar + 'px','padding-top':StatusBar + 'px'}">
 				<view class="action" @tap="toSearch">
-					<text class="cuIcon-search"></text>
+					<text class="iconfont icon-rcd-search" style="font-size: 40upx;"></text>
 				</view>
 				<view class="content text-bold" :style="[{top:StatusBar + 'px'}]">
 					个人信息
 				</view>
 				<!--  #ifdef H5 -->
 				<view class="action header-btn">
-					<text class="cuIcon-notice" @tap="toLink('/pages/user/inbox')">
+					<text class="iconfont icon-rcd-bell" @tap="toLink('/pages/user/inbox')">
 						<text class="noticeSum bg-red" v-if="noticeSum>0">{{noticeSum}}</text>
 					</text>
 					<!-- <text class="cuIcon-clothes" @tap="goStyle"></text> -->
@@ -107,131 +107,71 @@
 			</view>
 			
 		</view>
-		<view class="data-box">
-			<view class="index-sort grid col-4">
-				<view class="index-sort-box">
-					<waves itemClass="butclass">
-						<view class="index-sort-main" @tap="toLink('/pages/user/useredit')">
-							<view class="index-sort-i" style="background-color: #006493;">
-								<text class="cuIcon-edit"></text>
-							</view>
-							<view class="index-sort-text">
-								个人信息
-							</view>
-						</view>
-					</waves>
-				</view>
-				<!--  #ifdef H5 || APP-PLUS -->
-				<view class="index-sort-box">
-					<waves itemClass="butclass">
-						<view class="index-sort-main" @tap="toLink('/pages/user/followList?uid='+uid)">
-							<view class="index-sort-i" style="background-color: #ff7a06;">
-								<text class="cuIcon-attentionfill"></text>
-							</view>
-							<view class="index-sort-text">
-								我的关注
-							</view>
-						</view>
-					</waves>
-				</view>
-				<!--  #endif -->
-				<view class="index-sort-box">
-					<waves itemClass="butclass">
-						<view class="index-sort-main" @tap="toLink('/pages/user/usermark')">
-							<view class="index-sort-i">
-								<text class="cuIcon-favorfill"></text>
-							</view>
-							<view class="index-sort-text">
-								收藏
-							</view>
-						</view>
-					</waves>
-				</view>
-				<!--  #ifdef H5 || APP-PLUS -->
-				<view class="index-sort-box">
-					<waves itemClass="butclass">
-						<view class="index-sort-main" @tap="toLink('/pages/user/userpost')">
-							<view class="index-sort-i">
-								<text class="cuIcon-writefill"></text>
-							</view>
-							<view class="index-sort-text">
-								我的投稿
-							</view>
-						</view>
-					</waves>
-				</view>
-				
-				<view class="index-sort-box">
-					<waves itemClass="butclass">
-						<view class="index-sort-main" @tap="toLink('/pages/user/myshop')">
-							<view class="index-sort-i" style="background-color: #0aa347;">
-								<text class="cuIcon-present"></text>
-							</view>
-							<view class="index-sort-text">
-								我的商品
-							</view>
-						</view>
-					</waves>
-				</view>
-				<!--  #endif -->
-				<view class="index-sort-box"  @tap="toPage('帮助与反馈',feedback)">
-					<waves itemClass="butclass">
-						<view class="index-sort-main">
-							<view class="index-sort-i">
-								<text class="cuIcon-post"></text>
-							</view>
-							<view class="index-sort-text">
-								意见反馈
-							</view>
-						</view>
-					</waves>
-				</view>
-				<!--  #ifdef H5 || APP-PLUS -->
-				<view class="index-sort-box" @tap="toLink('/pages/user/order')">
-					<waves itemClass="butclass">
-						<view class="index-sort-main">
-							<view class="index-sort-i" style="background-color: #f8c909;">
-								<text class="cuIcon-baby"></text>
-							</view>
-							<view class="index-sort-text">
-								订单记录
-							</view>
-						</view>
-					</waves>
-				</view>
-				<view class="index-sort-box">
-					<waves itemClass="butclass">
-						<view class="index-sort-main" @tap="toLink('/pages/user/assets')">
-							<view class="index-sort-i">
-								<text class="cuIcon-choicenessfill"></text>
-							</view>
-							<view class="index-sort-text">
-								财务中心
-							</view>
-						</view>
-					</waves>
-				</view>
-				<!--  #endif -->
-			</view>
-		</view>
 		<!--  #ifdef H5 || APP-PLUS -->
-		<view class="data-box" v-if="group=='administrator'||group=='editor'">
-			<view class="cu-list menu" @tap="toManage">
-				<view class="cu-item">
+				<view class="data-box" v-if="group=='administrator'||group=='editor'">
+					<view class="cu-list menu" @tap="toManage">
+						<view class="cu-item">
+							<view class="content">
+								<text class="cuIcon-colorlens text-red"></text>
+								<text>管理中心 </text>
+							</view>
+							<view class="action">
+								<text class="text-sm text-gray">仅管理员&编辑显示</text>
+								<text class="cuIcon-right"></text>
+							</view>
+						</view>
+					</view>
+				</view>
+				<!--  #endif -->
+		<!-- 列表菜单 -->
+		<view class="data-box">
+			<view class="cu-list menu">
+				<view class="cu-item" @tap="toLink('/pages/user/userpost')">
 					<view class="content">
-						<text class="cuIcon-colorlens text-red"></text>
-						<text>管理中心 </text>
+						<text class="cuIcon-settingsfill text-shojo"></text>
+						<text>我的投稿</text>
 					</view>
 					<view class="action">
-						<text class="text-sm text-gray">仅管理员&编辑显示</text>
 						<text class="cuIcon-right"></text>
 					</view>
 				</view>
+			<view class="cu-item" @tap="toLink('/pages/user/usermark')">
+				<view class="content">
+					<text class="cuIcon-newfill text-shojo"></text>
+					<text>我的收藏</text>
+				</view>
+				<view class="action">
+					<text class="cuIcon-right"></text>
+				</view>
+			</view>
+			<view class="cu-item" @tap="toLink('/pages/user/followList?uid='+uid)">
+				<view class="content">
+					<text class="cuIcon-newfill text-shojo"></text>
+					<text>我的关注</text>
+				</view>
+				<view class="action">
+					<text class="cuIcon-right"></text>
+				</view>
+			</view>
+			<view class="cu-item" @tap="toLink('/pages/user/myshop')">
+				<view class="content">
+					<text class="cuIcon-newfill text-shojo"></text>
+					<text>我的商品</text>
+				</view>
+				<view class="action">
+					<text class="cuIcon-right"></text>
+				</view>
+			</view>
+			<view class="cu-item" @tap="toLink('/pages/user/order')">
+				<view class="content">
+					<text class="cuIcon-newfill text-shojo"></text>
+					<text>我的订单</text>
+				</view>
+				<view class="action">
+					<text class="cuIcon-right"></text>
+				</view>
 			</view>
 		</view>
-		<!--  #endif -->
-		<view class="data-box">
-			
 			<view class="cu-list menu">
 				<view class="cu-item" @tap="toSetUp">
 					<view class="content">
@@ -252,6 +192,16 @@
 						<text class="cuIcon-right"></text>
 					</view>
 				</view>
+				<view class="cu-item"   @tap="toPage('帮助与反馈',feedback)">
+						<view class="content">
+							<text class="cuIcon-servicefill text-shojo"></text>
+							<text>意见反馈</text>
+						</view>
+						<view class="action">
+							<text class="cuIcon-right"></text>
+						</view>
+					</view>
+					
 				<!--  #endif -->
 				<view class="cu-item" @tap="toPage('关于平台',aboutme)">
 					<view class="content">

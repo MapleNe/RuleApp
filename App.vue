@@ -174,6 +174,7 @@
 	@import "colorui/main.css";
 	@import "colorui/icon.css";
 	@import "static/base.css";
+	@import "static/icon.css";
 	.nav-list {
 		display: flex;
 		flex-wrap: wrap;

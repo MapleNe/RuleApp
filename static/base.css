@@ -127,6 +127,7 @@ page{
 	background-color: #ffffff;
 	/* box-shadow: 0px 0px 5px rgba(0,0,0,.1); */
 	padding: 0upx;
+	border-radius: 12upx !important;
 }
 .all-box{
 	margin-top: 20upx;
@@ -134,7 +135,7 @@ page{
 }
 .data-box-title{
 	color: #333;
-	font-size: 26upx !important;
+	font-size: 30upx !important;
 	font-weight: bold;
 	text-overflow: -o-ellipsis-lastline;
 	overflow: hidden;
@@ -242,8 +243,6 @@ page{
 }
 .cu-card.article>.cu-item .article-content-btn.article-list-btn{
 	margin-top: 10upx;
-	float:left;
-	padding-left:1px;
 }
 .article-img{
 	padding: 0upx 10upx;;
@@ -468,7 +467,6 @@ page{
 	padding: 0upx 30upx 20upx 30upx;
 } */
 .top-box{
-	display: table-cell;
 	padding: 20upx 0upx;
 	border-bottom: solid 1px #f9f9f9;
 	overflow:hidden;
@@ -1426,8 +1424,8 @@ page{
 	vertical-align:middle;
 }
 .tImg{
-	width: 40upx;
-	height: 40upx;
+	width: 50upx;
+	height: 50upx;
 	
 }
 .OwO-box{

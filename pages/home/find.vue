@@ -3,7 +3,7 @@
 		<view class="header" :style="[{height:CustomBar + 'px'}]">
 			<view class="cu-bar bg-white" :style="{'height': CustomBar + 'px','padding-top':StatusBar + 'px'}">
 				<view class="action" @tap="toSearch">
-					<text class="cuIcon-search"></text>
+					<text class="iconfont icon-rcd-search" style="font-size: 40upx;"></text>
 				</view>
 				<view class="content text-bold" :style="[{top:StatusBar + 'px'}]">
 					动态
@@ -11,7 +11,7 @@
 				<!--  #ifdef H5 || APP-PLUS -->
 				<view class="action header-btn">
 					
-					<text class="cuIcon-notice" @tap="toLink('/pages/user/inbox')">
+					<text class="iconfont icon-rcd-bell" @tap="toLink('/pages/user/inbox')">
 						<text class="noticeSum bg-red" v-if="noticeSum>0">{{noticeSum}}</text>
 					</text>
 				</view>

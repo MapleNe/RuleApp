@@ -18,7 +18,7 @@
 				<view class="action info-btn">
 					<!--  #ifdef H5 || APP-PLUS -->
 					
-					<text class="cuIcon-search"  @tap="toSearch"></text>
+					<text class="iconfont icon-rcd-search"  @tap="toSearch"></text>
 					<!--  #endif -->
 				</view>
 			</view>
@@ -39,7 +39,7 @@
 					<view class="cu-item">
 						<view class="cu-avatar round lg" :style="userInfo.style"  @tap="toUserInfo(userInfo)"></view>
 						<view class="content">
-							<view class="text-grey">
+							<view class="text-shojo">
 								<block v-if="userInfo.screenName">
 									{{userInfo.screenName}}
 								</block>
@@ -173,7 +173,7 @@
 				<view class="content-btn grid col-2">
 					<view class="content-btn-box">
 						<view class="content-btn-i" @tap="toLikes">
-							<text class="cuIcon-appreciatefill btn-i"></text>
+							<text class="iconfont icon-rcd-heart btn-i"></text>
 							<text>点赞( {{formatNumber(likes)}} )</text>
 						</view>
 					</view>
@@ -189,23 +189,23 @@
 				<view class="content-btn grid col-2">
 					<view class="content-btn-box">
 						<view class="content-btn-i" @tap="toLikes" v-if="isLikes==0">
-							<text class="cuIcon-appreciate btn-i"></text>
+							<text class="iconfont icon-rcd-heart btn-i"></text>
 							<text>点赞( {{formatNumber(likes)}} )</text>
 						</view>
 						<view class="content-btn-i" @tap="toLikes" v-else>
-							<text class="cuIcon-appreciatefill text-shojo btn-i"></text>
+							<text class="iconfont icon-rcd-heart text-shojo btn-i"></text>
 							<text>点赞( {{formatNumber(likes)}} )</text>
 						</view>
 					</view>
 					<view class="content-btn-box"  @tap="toMark"  v-if="isMark==0">
 						<view class="content-btn-i">
-							<text class="cuIcon-favor btn-i"></text>
+							<text class="iconfont icon-rcd-star btn-i"></text>
 							<text>收藏</text>
 						</view>
 					</view>
 					<view class="content-btn-box"  @tap="rmMark"  v-else>
 						<view class="content-btn-i">
-							<text class="cuIcon-favorfill btn-i"></text>
+							<text class="iconfont icon-rcd-star btn-i text-shojo"></text>
 							<text>已收藏</text>
 						</view>
 					</view>
@@ -328,13 +328,13 @@
 				</view>
 			</view>
 			<view class="info-footer-btn">
-				<text class="cuIcon-appreciate" @tap="toLikes" v-if="isLikes==0"></text>
-				<text class="cuIcon-appreciatefill text-shojo" @tap="toLikes" v-else></text>
-				<text class="cuIcon-favor" @tap="toMark" v-if="isMark==0"></text>
-				<text class="cuIcon-favorfill text-shojo" @tap="rmMark" v-else></text>
+				<text class="iconfont icon-rcd-heart" @tap="toLikes" v-if="isLikes==0"></text>
+				<text class="iconfont icon-rcd-heart text-shojo" @tap="toLikes" v-else></text>
+				<text class="iconfont icon-rcd-star" @tap="toMark" v-if="isMark==0"></text>
+				<text class="iconfont icon-rcd-star text-shojo" @tap="rmMark" v-else></text>
 				<!-- <text class="cuIcon-recharge"  @tap="toReward"></text> -->
-				<text class="cuIcon-recharge"  @tap="showModal" data-target="ChooseModal"></text>
-				<text class="cuIcon-share text-shojo" @tap="ToShare"></text>
+<!-- 				<text class="cuIcon-recharge"  @tap="showModal" data-target="ChooseModal"></text> -->
+				<text class="iconfont icon-rcd-share text-shojo" @tap="ToShare"></text>
 				
 				
 			</view>

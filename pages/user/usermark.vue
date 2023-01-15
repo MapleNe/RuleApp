@@ -9,7 +9,7 @@
 					我的收藏
 				</view>
 				<view class="action" @tap="toSearch">
-					<text class="cuIcon-search"></text>
+					<text class="iconfont icon-rcd-search" style="font-size: 40upx;"></text>
 				</view>
 			</view>
 		</view>

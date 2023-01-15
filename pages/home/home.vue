@@ -22,12 +22,12 @@
 					<text class="home-noLogin">登录</text>
 				</view>
 				<view class="search-form radius">
-					<text class="cuIcon-search"></text>
+					<text class="iconfont icon-rcd-search" style="padding-right: 4upx;color: #666;"></text>
 					<input type="text" placeholder="搜索图片、文章、视频" confirm-type="search" disabled="disabled"  @tap="toSearch"></input>
 				</view>
 				<view class="action header-btn">
 					
-					<text class="cuIcon-notice" @tap="toLink('/pages/user/inbox')">
+					<text class="iconfont icon-rcd-bell" @tap="toLink('/pages/user/inbox')">
 						<text class="noticeSum bg-red" v-if="noticeSum>0">{{noticeSum}}</text>
 					</text>
 					<!-- <text class="cuIcon-search" @tap="toSearch"></text> -->
@@ -42,7 +42,7 @@
 				</view>
 			</scroll-view>
 			<view class="goCategory" @tap="goCategory">
-				<text class="cuIcon-moreandroid"></text>
+				<text class="iconfont icon-rcd-ellopsis-v"></text>
 			</view>
 		</view>
 		<view :style="[{padding:NavBar+44+ 'px 10px 0px 10px'}]"></view>

@@ -10,7 +10,7 @@
 				</view>
 				<!--  #ifdef H5 || APP-PLUS -->
 				<view class="action" @tap="toPost">
-					<text class="cuIcon-add"></text>
+					<text class="iconfont icon-rcd-plus"></text>
 				</view>
 				<!--  #endif -->
 			</view>
