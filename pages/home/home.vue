@@ -291,11 +291,14 @@
 							<view class="content-author content-header">
 								<image :src="item.authorInfo.avatar" mode="aspectFill"></image>
 								<text class="content-author-name">{{item.authorInfo.name}}</text>
-								<text class="article-category" v-if="item.category.length>0">{{item.category[0].name}}</text>
+								<!-- <text class="article-category" v-if="item.category.length>0">{{item.category[0].name}}</text> -->
 							</view>
 						</block>
 						<view class="title">
-							<view class="text-cut">{{replaceSpecialChar(item.title)}}</view>
+							<view class="text-cut">
+								<text class="article-category bg-shojo bg-shojo-radius radius" v-if="item.category.length>0">{{item.category[0].name}}</text>
+							{{replaceSpecialChar(item.title)}}
+							</view>
 						</view>
 						<block v-if="item.abcimg == 'mable'">
 							
@@ -317,7 +320,7 @@
 							<view class="content-author content-header bigImg-style">
 								<image :src="item.authorInfo.avatar" mode="aspectFill"></image>
 								<text class="content-author-name">{{item.authorInfo.name}}</text>
-								<text class="article-category" v-if="item.category.length>0">{{item.category[0].name}}</text>
+								<!-- <text class="article-category" v-if="item.category.length>0">{{item.category[0].name}}</text> -->
 							</view>
 						</block>
 						<block v-if="item.abcimg == 'bable'">
@@ -331,8 +334,8 @@
 							</view>
 							<view class="content-author content-header bigImg-style">
 								<image :src="item.authorInfo.avatar" mode="aspectFill"></image>
-								<text class="content-author-name">{{item.authorInfo.name}}</text>
-								<text class="article-category" v-if="item.category.length>0">{{item.category[0].name}}</text>
+								<!-- <text class="content-author-name">{{item.authorInfo.name}}</text> -->
+								
 							</view>
 						</block>
 						<block v-if="item.abcimg == 'able'||!item.abcimg">
@@ -346,7 +349,7 @@
 									<view class="content-author" v-if="item.images.length>0">
 										<image :src="item.authorInfo.avatar" mode="aspectFill"></image>
 										<text class="content-author-name">{{item.authorInfo.name}}</text>
-										<text class="article-category" v-if="item.category.length>0">{{item.category[0].name}}</text>
+										<!-- <text class="article-category" v-if="item.category.length>0">{{item.category[0].name}}</text> -->
 									</view>
 								</view>
 							</view>
