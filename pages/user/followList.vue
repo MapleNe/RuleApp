@@ -42,7 +42,7 @@
 						</view> </view>
 				</view>
 				<view class="action goUserIndex">
-					<view class="cu-btn bg-gradual-red">主页</view>
+					<view class="cu-btn bg-shojo">主页</view>
 					
 				</view>
 			</view>

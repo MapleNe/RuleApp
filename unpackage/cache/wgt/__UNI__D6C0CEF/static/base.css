@@ -127,6 +127,7 @@ page{
 	background-color: #ffffff;
 	/* box-shadow: 0px 0px 5px rgba(0,0,0,.1); */
 	padding: 0upx;
+	border-radius: 12upx !important;
 }
 .all-box{
 	margin-top: 20upx;
@@ -348,7 +349,7 @@ page{
 	
 }
 .info-tyle{
-	padding: 0upx 30upx 20upx 30upx;
+	padding: 0upx 30upx 30upx 30upx;
 	font-size: 24upx;
 	background: #fff;
 	border-bottom: solid 1px #f3f3f3;
@@ -357,7 +358,7 @@ page{
 	margin: 0upx 8upx 0upx 20upx;
 }
 .info-date{
-	float: right;
+	float: left;
 	color: #999;
 }
 .info-content{
@@ -466,7 +467,6 @@ page{
 	padding: 0upx 30upx 20upx 30upx;
 } */
 .top-box{
-	display: table-cell;
 	padding: 20upx 0upx;
 	border-bottom: solid 1px #f9f9f9;
 	overflow:hidden;
@@ -1463,7 +1463,7 @@ page{
 	line-height: 100upx;
 }
 .info-footer-btn text{
-	margin: 0upx 20upx;
+	margin: 0upx 28upx;
 }
 .user-list-btn{
 	width: 340upx !important;
@@ -2096,7 +2096,7 @@ page{
 }
 .cu-avatar .home-noLogin{
 	font-size: 24upx;
-	color: #0081ff;
+	color: #FB7299;
 }
 .cu-avatar{
 	background-color: #eee;
@@ -2203,15 +2203,17 @@ page{
 	width:180upx;
 }
 .goUserIndex .cu-btn{
-	border-radius: 6upx;
+	border-radius: 40upx;
 }
 .goUserIndex .isFollow{
 	background: #FB7299 !important;
 	color: #fff !important;
+	padding: 0 24upx;
 }
 .goUserIndex .unFollow{
 	background: #FB7299 !important;
 	color: #fff !important;
+	padding: 0 24upx;
 }
 .goUserIndex .unFollow text{
 	font-weight: bold;
@@ -2234,4 +2236,14 @@ page{
 .bg-shojo {
 	background-color: #FB7299;
 	color: #fff
+}
+.bg-shojo-radius{
+	padding: 4upx 32upx;
+	margin-right: 8upx;
+	border-radius: 40upx;
+}
+.bg-padding {
+	padding: 8upx 28upx;
+	margin-right: 8upx;
+	border-radius: 40upx;
 }
