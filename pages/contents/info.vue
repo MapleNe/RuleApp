@@ -29,8 +29,8 @@
 				{{replaceSpecialChar(title)}}
 			</view>
 			<view class="info-tyle">
-				<text class="text-shojo" v-if="category.length>0" @tap="toCategoryContents(category)">{{category[0].name}}</text>
-				<text class="text-gray" v-if="category.length==0">暂无分类</text>
+				<!-- <text class="text-shojo" v-if="category.length>0" @tap="toCategoryContents(category)">{{category[0].name}}</text>
+				<text class="text-gray" v-if="category.length==0">暂无分类</text> -->
 				<text class="info-date" v-if="created!=''">{{formatDate(created)}}
 				</text>
 			</view>
@@ -39,12 +39,27 @@
 					<view class="cu-item">
 						<view class="cu-avatar round lg" :style="userInfo.style"  @tap="toUserInfo(userInfo)"></view>
 						<view class="content">
-							<view class="text-shojo">
+							<view class="text-black">
 								<block v-if="userInfo.screenName">
-									{{userInfo.screenName}}
+									<view v-if="userInfo.isvip==1" class="text-shojo">
+										<view v-if="userInfo.vip==1" class="text-shojo">
+											{{userInfo.screenName}}
+										
+										</view>
+									</view>
+									<view v-else>
+											{{userInfo.screenName}}
+									</view>
 								</block>
 								<block v-else>
-									{{userInfo.name}}
+									<view v-if="userInfo.isvip==1" class="text-shojo">
+										<view v-if="userInfo.vip==1" class="text-shojo">
+											{{userInfo.name}}
+										</view>
+									</view>
+									<view v-else>
+											{{userInfo.name}}
+									</view>
 								</block>
 								<!--  #ifdef H5 || APP-PLUS -->
 								<text class="userlv" :style="getUserLvStyle(userInfo.lv)">{{getUserLv(userInfo.lv)}}</text>
@@ -185,11 +200,13 @@
 					</view>
 				</view>
 				<!--  #endif -->
+				<text class="text-shojo bg-shojo bg-padding" v-if="category.length>0" @tap="toCategoryContents(category)">{{category[0].name}}</text>
+				<text class="text-gray" v-if="category.length==0">暂无分类</text>
 				<!--  #ifdef MP -->
 				<view class="content-btn grid col-2">
 					<view class="content-btn-box">
 						<view class="content-btn-i" @tap="toLikes" v-if="isLikes==0">
-							<text class="iconfont icon-rcd-heart btn-i"></text>
+							<text class="iconfont icon-rcd-heart  btn-i"></text>
 							<text>点赞( {{formatNumber(likes)}} )</text>
 						</view>
 						<view class="content-btn-i" @tap="toLikes" v-else>
@@ -199,17 +216,18 @@
 					</view>
 					<view class="content-btn-box"  @tap="toMark"  v-if="isMark==0">
 						<view class="content-btn-i">
-							<text class="iconfont icon-rcd-star btn-i"></text>
+							<text class="iconfont icon-rcd-star  btn-i"></text>
 							<text>收藏</text>
 						</view>
 					</view>
 					<view class="content-btn-box"  @tap="rmMark"  v-else>
 						<view class="content-btn-i">
-							<text class="iconfont icon-rcd-star btn-i text-shojo"></text>
+							<text class="iconfont icon-rcd-star text-shojo btn-i"></text>
 							<text>已收藏</text>
 						</view>
 					</view>
 				</view>
+
 				<!--  #endif -->
 				<view class="tags" v-if="tagList.length>0">
 					
@@ -233,7 +251,7 @@
 					</view>
 				</view>
 				<view class="no-data" v-if="commentsList.length==0">
-					暂时没有评论
+					没有评论哦~
 				</view>
 				<view class="cu-card dynamic no-card info-comment" style="margin-top: 20upx;">
 					<view class="cu-item" v-for="(item,index) in commentsList" :key="index" v-if="commentsList.length>0">
@@ -244,23 +262,45 @@
 							<view class="cu-item">
 								<view class="cu-avatar round" @tap="toUserContents(item)" :style="item.style"></view>
 								<view class="content">
-									<view class="text-black">
-										{{item.author}}
-										<!--  #ifdef H5 || APP-PLUS -->
-										<text class="userlv" :style="getUserLvStyle(item.lv)">{{getUserLv(item.lv)}}</text>
-										<!--  #endif -->
-										<text class="userlv customize" v-if="item.customize&&item.customize!=''">{{item.customize}}</text>
-										<!--  #ifdef H5 || APP-PLUS -->
-										<block v-if="item.isvip>1">
-											<block v-if="item.vip==1">
-												<text class="isVIP bg-shojo">大会员</text>
+									<view v-if="item.isvip>1" class="text-shojo">
+										<view v-if="item.vip==1" class="text-shojo">
+											{{item.author}}
+											<!--  #ifdef H5 || APP-PLUS -->
+											<text class="userlv" :style="getUserLvStyle(item.lv)">{{getUserLv(item.lv)}}</text>
+											<!--  #endif -->
+											<text class="userlv customize" v-if="item.customize&&item.customize!=''">{{item.customize}}</text>
+											<!--  #ifdef H5 || APP-PLUS -->
+											<block v-if="item.isvip>1">
+												<block v-if="item.vip==1">
+													<text class="isVIP bg-shojo">大会员</text>
+												</block>
+												<block v-else>
+													<text class="isVIP bg-shojo">大会员</text>
+												</block>
 											</block>
-											<block v-else>
-												<text class="isVIP bg-shojo">大会员</text>
-											</block>
-										</block>
-										<!--  #endif -->
+											<!--  #endif -->
+										</view>
 									</view>
+									<view v-else>
+											{{item.author}}
+											<!--  #ifdef H5 || APP-PLUS -->
+											<text class="userlv" :style="getUserLvStyle(item.lv)">{{getUserLv(item.lv)}}</text>
+											<!--  #endif -->
+											<text class="userlv customize" v-if="item.customize&&item.customize!=''">{{item.customize}}</text>
+											<!--  #ifdef H5 || APP-PLUS -->
+											<block v-if="item.isvip>1">
+												<block v-if="item.vip==1">
+													<text class="isVIP bg-shojo">大会员</text>
+												</block>
+												<block v-else>
+													<text class="isVIP bg-shojo">大会员</text>
+												</block>
+											</block>
+											<!--  #endif -->
+									</view>
+									
+									
+									
 									<view class="text-content text-df break-all">
 										<rich-text :nodes="markCommentHtml(item.text)"></rich-text>
 									</view>
@@ -273,12 +313,12 @@
 									<view class="margin-top-sm flex justify-between">
 										<view class="text-gray text-df">{{formatDate(item.created)}}</view>
 										<view>
-											<text class="cuIcon-messagefill text-gray margin-left-sm" @tap="commentsAdd(item.author+'：'+item.text,item.coid,1)"></text>
+											<text class="iconfont icon-rcd-dialogue text-gray margin-left-sm" @tap="commentsAdd(item.author+'：'+item.text,item.coid,1)"></text>
 										</view>
 									</view>
 									<view class="comment-operation"  v-if="group=='administrator'||group=='editor'">
-										<text class="cuIcon-warnfill" @tap="toBan(item.authorId)">封禁</text>
-										<text class="cuIcon-deletefill text-red" @tap="toDelete(item.coid)">删除</text>
+										<text class="iconfont icon-rcd-info-triangle text-grey" style="font-size: 28upx;" @tap="toBan(item.authorId)">封禁</text>
+										<text class="iconfont icon-rcd-trash text-shojo" style="font-size: 28upx;" @tap="toDelete(item.coid)">删除</text>
 									</view>
 								</view>
 							</view>
