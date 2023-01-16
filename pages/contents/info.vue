@@ -113,7 +113,7 @@
 									 mode="aspectFill"></image>
 									<view class="text-content">{{item.title}}</view>
 									<view class="tool-price" v-if="isBuy==0">
-										<text class="text-red text-bold">{{item.price}} 萌</text><text class="margin-left-sm text-sm">大会员只需</text><text class="text-yellow text-bold">{{parseInt(item.price * item.vipDiscount)}} 积分</text>
+										<text class="text-red text-bold">{{item.price}} 萌</text><text class="margin-left-sm text-sm">大会员只需</text><text class="text-yellow text-bold">{{parseInt(item.price * item.vipDiscount)}} 萌</text>
 									</view>
 									<view class="tool-price">
 										<text class="cu-btn bg-blue" @tap="shopBuy(item.id)">立即下单</text>
@@ -131,14 +131,14 @@
 									 mode="aspectFill"></image>
 									<view class="text-content">{{item.title}}</view>
 									<view class="tool-price" v-if="isBuy==0">
-										<text class="text-red text-bold">{{item.price}} 萌</text><text class="margin-left-sm text-sm">大会员只需</text><text class="text-yellow text-bold">{{parseInt(item.price * item.vipDiscount)}} 积分</text>
+										<text class="text-red text-bold">{{item.price}} 萌</text><text class="margin-left-sm text-sm">大会员只需</text><text class="text-yellow text-bold">{{parseInt(item.price * item.vipDiscount)}} 萌</text>
 									</view>
 									<view class="tool-price" v-if="isBuy==1">
-										<text class="cu-btn bg-blue" @tap="toShopValue(item.id,item.type)">查看收费内容</text>
+										<text class="cu-btn bg-shojo" @tap="toShopValue(item.id,item.type)">查看收费内容</text>
 										<text class="cu-btn text-red" @tap="shopInfo(item)">商品详情</text>
 									</view>
 									<view class="tool-price" v-else>
-										<text class="cu-btn bg-blue" @tap="shopBuy(item.id)">购买后下载</text>
+										<text class="cu-btn bg-shojo" @tap="shopBuy(item.id)">购买后下载</text>
 										<text class="cu-btn text-red" @tap="shopInfo(item)">商品详情</text>
 									</view>
 								</view>
@@ -153,7 +153,7 @@
 									 mode="aspectFill"></image>
 									<view class="text-content">{{item.title}}</view>
 									<view class="tool-price" v-if="isBuy==0">
-										<text class="text-red text-bold">{{item.price}} 萌</text><text class="margin-left-sm text-sm">大会员只需</text><text class="text-yellow text-bold">{{parseInt(item.price * item.vipDiscount)}} 积分</text>
+										<text class="text-red text-shojo">{{item.price}} 萌</text><text class="margin-left-sm text-sm">大会员只需</text><text class="text-yellow text-shojo">{{parseInt(item.price * item.vipDiscount)}} 萌</text>
 									</view>
 									<view class="tool-price" v-if="isBuy==1">
 										<text class="cu-btn bg-blue" @tap="toShopValue(item.id,item.type)">查看收费内容</text>
@@ -172,13 +172,13 @@
 										阅读
 									</view>
 									<view class="tool-price" v-if="isBuy==0">
-										<text class="text-red text-bold">{{item.price}} 萌</text><text class="margin-left-sm text-sm">大会员只需</text><text class="text-yellow text-bold">{{parseInt(item.price * item.vipDiscount)}} 积分</text>
+										<text class="text-red text-shojo">{{item.price}} 萌</text><text class="margin-left-sm text-sm">大会员只需</text><text class="text-yellow text-shojo">{{parseInt(item.price * item.vipDiscount)}} 萌</text>
 									</view>
 									<view class="tool-price" v-if="isBuy==1">
 										<text class="cu-btn bg-blue" @tap="toShopValue(item.id,item.type)">查看收费内容</text>
 									</view>
 									<view class="tool-price" v-else>
-										<text class="cu-btn bg-blue" @tap="shopBuy(item.id)">购买后阅读剩余内容</text>
+										<text class="cu-btn bg-shojo" @tap="shopBuy(item.id)">购买后阅读剩余内容</text>
 									</view>
 								</view>
 							</block>

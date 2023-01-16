@@ -80,8 +80,8 @@
 				</view>
 				
 				<block v-if="userInfo!=null">
-					<text class="clock-btn" @tap="toClock" v-if="isClock==0">签到</text>
-					<text class="clock-btn istap" v-else>已签到</text>
+					<text class="clock-btn" style="font-size: 24upx;" @tap="toClock" v-if="isClock==0">签到</text>
+					<text class="clock-btn istap iconfont icon-rcd-check" style="font-size: 24upx;" v-else>已签到</text>
 					<!--  #ifdef H5 || APP-PLUS -->
 					<view class="user-data grid col-4" v-if="userInfo!=null">
 						<view class="user-data-box" @tap="toLink('/pages/user/userpost')">

@@ -253,11 +253,11 @@
 						</block>
 						
 						<view class="article-content-btn article-list-btn">
-							<view class="cu-tag data-author"><text class="cuIcon-attentionfill"></text>{{formatNumber(item.views)}}</view>
-							<view class="cu-tag data-author"><text class="cuIcon-appreciatefill"></text>{{item.likes}}</view>
-							<view class="cu-tag data-author"><text class="cuIcon-messagefill"></text>{{item.commentsNum}}</view>
+							<view class="cu-tag data-author"><text class="iconfont icon-rcd-eye" style="font-size: 16px;"></text>{{formatNumber(item.views)}}</view>
+							<view class="cu-tag data-author"><text class="iconfont icon-rcd-heart" style="font-size: 16px;"></text>{{item.likes}}</view>
+							<!-- <view class="cu-tag data-author"><text class="cuIcon-messagefill"></text>{{item.commentsNum}}</view> -->
 						
-							<view class="cu-tag data-time">{{formatDate(item.created)}}</view>
+							<!-- <view class="cu-tag data-time">{{formatDate(item.created)}}</view> -->
 						</view>
 					</view>
 
@@ -356,10 +356,9 @@
 						</block>
 						
 						<view class="article-content-btn article-list-btn">
-							<view class="cu-tag data-author"><text class="cuIcon-attentionfill"></text>{{formatNumber(item.views)}}</view>
-							<view class="cu-tag data-author"><text class="cuIcon-appreciatefill"></text>{{item.likes}}</view>
-							<view class="cu-tag data-author"><text class="cuIcon-messagefill"></text>{{item.commentsNum}}</view>
-						
+							<view class="cu-tag data-author"><text class="iconfont icon-rcd-eye" style="font-size: 16px;"></text>{{formatNumber(item.views)}}</view>
+							<view class="cu-tag data-author"><text class="iconfont icon-rcd-heart" style="font-size: 16px;"></text>{{item.likes}}</view>
+							<!-- <view class="cu-tag data-author"><text class="cuIcon-messagefill"></text>{{item.commentsNum}}</view> -->
 							<!-- <view class="cu-tag data-time">{{formatDate(item.created)}}</view> -->
 						</view>
 					</view>
