@@ -28,10 +28,10 @@
 							剩余：<text class="text-shojo">{{pushAdsNum || 0}}</text>
 						</view>
 						<view class="ads-price">
-							<text class="text-red">{{pushAdsPrice || 0}}萌</text>/天
+							<text class="text-shojo">{{pushAdsPrice || 0}}萌</text>/天
 						</view>
 						<view class="ads-btn" @tap="goAdsBuy(pushAdsPrice,pushAdsNum,0)">
-							<text class="text-green">立即购买</text>
+							<text class="text-shojo">立即购买</text>
 						</view>
 					</view>
 				</view>
@@ -49,10 +49,10 @@
 							剩余：<text class="text-shojo">{{bannerAdsNum || 0}}</text>
 						</view>
 						<view class="ads-price">
-							<text class="text-red">{{bannerAdsPrice || 0}} 萌</text>/天
+							<text class="text-shojo">{{bannerAdsPrice || 0}}萌</text>/天
 						</view>
 						<view class="ads-btn" @tap="goAdsBuy(bannerAdsPrice,bannerAdsNum,1)">
-							<text class="text-green">立即购买</text>
+							<text class="text-shojo">立即购买</text>
 						</view>
 					</view>
 				</view>
@@ -70,10 +70,10 @@
 							剩余：<text class="text-shojo">{{startAdsNum || 0}}</text>
 						</view>
 						<view class="ads-price">
-							<text class="text-red">{{startAdsPrice || 0}}萌</text>/天
+							<text class="text-shojo">{{startAdsPrice || 0}}萌</text>/天
 						</view>
 						<view class="ads-btn" @tap="goAdsBuy(startAdsPrice,startAdsNum,2)">
-							<text class="text-green">立即购买</text>
+							<text class="text-shojo">立即购买</text>
 						</view>
 					</view>
 				</view>

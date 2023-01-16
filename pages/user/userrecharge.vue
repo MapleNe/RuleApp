@@ -26,7 +26,7 @@
 				<block v-if="isToPay==0">
 					<view class="userrecharge-form">
 						<input placeholder="请输入充值金额(￥),最低5元" type="number" name="input" v-model="num"></input>
-						<button class="cu-btn bg-yellow radius" @tap="pay">确定充值</button>
+						<button class="cu-btn bg-shojo radius" @tap="pay">确定充值</button>
 					</view>
 				</block>
 				<block v-if="isToPay==1">
@@ -35,8 +35,8 @@
 					</view>
 					<view class="userrecharge-btn">
 						<text class="cu-btn bg-cyan radius" @tap="dtImg">保存二维码</text>
-						<text class="cu-btn bg-yellow radius" v-if="payType=='0'" @tap="toAlipay()">打开支付宝</text>
-						<text class="cu-btn bg-yellow radius" v-if="payType=='1'" @tap="toWxpay()">打开微信</text>
+						<text class="cu-btn bg-shojo radius" v-if="payType=='0'" @tap="toAlipay()">打开支付宝</text>
+						<text class="cu-btn bg-shojo radius" v-if="payType=='1'" @tap="toWxpay()">打开微信</text>
 					</view>
 				</block>
 			</block>
@@ -44,7 +44,7 @@
 				<block v-if="isToPay==0">
 					<view class="userrecharge-form">
 						<input placeholder="请填入充值码" name="input" type="text" v-model="num"></input>
-						<button class="cu-btn bg-yellow radius" @tap="tokenPay">确定充值</button>
+						<button class="cu-btn bg-shojo radius" @tap="tokenPay">确定充值</button>
 					</view>
 				</block>
 				
@@ -60,7 +60,7 @@
 						</view>
 					</view>
 					<input placeholder="请输入充值金额(￥),最低5元" name="input" type="text" v-model="num"></input>
-					<button class="cu-btn bg-yellow radius" @tap="toEpay()">确定充值</button>
+					<button class="cu-btn bg-shojo radius" @tap="toEpay()">确定充值</button>
 				</view>
 			</block>
 			<view class="userrecharge-intro" v-if="payType==1||payType==0">

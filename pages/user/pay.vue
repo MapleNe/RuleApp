@@ -39,7 +39,7 @@
 			<view class="cu-form-group">
 				<view class="title">收款二维码</view>
 				<view class="action">
-					<text class="cu-btn bg-blue radius" @tap="upload">上传图片</text>
+					<text class="cu-btn bg-shojo radius" @tap="upload">上传图片</text>
 				</view>
 			</view>
 			<view class="pay-codeImg" v-if="imgurl!=''">

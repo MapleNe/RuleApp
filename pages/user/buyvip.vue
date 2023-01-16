@@ -17,7 +17,7 @@
 			<view class="vip-box">
 				<view class="vip-maim">
 					<view class="bg-gradual-blue text-center shadow-blur">
-						<view class="text-lg text-bold">月付大会员<text class="text-red margin-left">{{vipPrice*30}}萌</text></view>
+						<view class="text-lg text-bold">月付大会员<text class="text-shojo margin-left">{{vipPrice*30}}萌</text></view>
 						<view class="margin-top-sm text-Abc">为您的账号获得30天大会员期限</view>
 						<view class="cu-btn radius margin-top bg-black  shadow-blur" @tap="toBuyVip(30)">立即购买</view>
 					</view>
@@ -26,7 +26,7 @@
 			<view class="vip-box">
 				<view class="vip-maim">
 					<view class="bg-gradual-blue text-center shadow-blur">
-						<view class="text-lg text-bold">季付大会员<text class="text-red margin-left">{{vipPrice*90}}萌</text></view>
+						<view class="text-lg text-bold">季付大会员<text class="text-shojo margin-left">{{vipPrice*90}}萌</text></view>
 						<view class="margin-top-sm text-Abc">获得90天大会员期限</view>
 						<view class="cu-btn radius margin-top bg-black  shadow-blur" @tap="toBuyVip(90)">立即购买</view>
 					</view>
@@ -35,7 +35,7 @@
 			<view class="vip-box">
 				<view class="vip-maim">
 					<view class="bg-gradual-blue text-center shadow-blur">
-						<view class="text-lg text-bold">年付大会员<text class="text-red margin-left">{{vipPrice*365}}萌</text></view>
+						<view class="text-lg text-bold">年付大会员<text class="text-shojo margin-left">{{vipPrice*365}}萌</text></view>
 						<view class="margin-top-sm text-Abc">获得365天大会员期限</view>
 						<view class="cu-btn radius margin-top bg-black  shadow-blur" @tap="toBuyVip(365)">立即购买</view>
 					</view>
@@ -44,7 +44,7 @@
 			<view class="vip-box">
 				<view class="vip-maim">
 					<view class="bg-gradual-orange padding radius text-center shadow-blur">
-						<view class="text-lg text-bold">永久大会员<text class="text-black margin-left">{{vipPrice*500}}萌</text></view>
+						<view class="text-lg text-bold">永久大会员<text class="text-shojo margin-left">{{vipPrice*500}}萌</text></view>
 						<view class="margin-top-sm text-Abc">享受永久大会员特权，并获取高亮大会员头衔</view>
 						<view class="cu-btn radius margin-top bg-black  shadow-blur" @tap="toBuyVip(500)">立即购买</view>
 					</view>

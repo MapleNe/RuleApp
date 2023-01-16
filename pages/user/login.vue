@@ -25,9 +25,9 @@
 					<input name="input" placeholder="用户密码" type="password" v-model="password"></input>
 				</view>
 				<view class="user-btn flex flex-direction">
-					<button class="cu-btn bg-blue margin-tb-sm lg" @tap="login">立即登录</button>
+					<button class="cu-btn bg-shojo margin-tb-sm lg" @tap="login">立即登录</button>
 					<!-- #ifdef MP -->
-					<button class="cu-btn bg-green margin-tb-sm lg" @tap="toRegister">注册新用户</button>
+					<button class="cu-btn bg-shojo margin-tb-sm lg" @tap="toRegister">注册新用户</button>
 					<!-- #endif -->
 					
 					

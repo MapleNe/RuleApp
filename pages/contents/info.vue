@@ -66,14 +66,14 @@
 								<!--  #endif -->
 								<text class="userlv customize" v-if="userInfo.customize&&userInfo.customize!=''">{{userInfo.customize}}</text>
 								<!--  #ifdef H5 || APP-PLUS -->
-								<block v-if="userInfo.isvip==1">
+								<!-- <block v-if="userInfo.isvip==1">
 									<block v-if="userInfo.vip==1">
 										<text class="isVIP bg-shojo">大会员</text>
 									</block>
 									<block v-else>
 										<text class="isVIP bg-shojo">大会员</text>
 									</block>
-								</block>
+								</block> -->
 								<!--  #endif -->
 							</view>
 							<view class="text-gray text-sm flex">
@@ -270,14 +270,14 @@
 											<!--  #endif -->
 											<text class="userlv customize" v-if="item.customize&&item.customize!=''">{{item.customize}}</text>
 											<!--  #ifdef H5 || APP-PLUS -->
-											<block v-if="item.isvip>1">
+											<!-- <block v-if="item.isvip>1">
 												<block v-if="item.vip==1">
 													<text class="isVIP bg-shojo">大会员</text>
 												</block>
 												<block v-else>
 													<text class="isVIP bg-shojo">大会员</text>
 												</block>
-											</block>
+											</block> -->
 											<!--  #endif -->
 										</view>
 									</view>

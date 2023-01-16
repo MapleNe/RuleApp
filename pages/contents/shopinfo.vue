@@ -38,14 +38,14 @@
 			<view class="shopinfo-price">
 				<block v-if="isvip==1">
 					{{parseInt(price * vipDiscount)}} 萌
-					<text class="text-yellow margin-left text-sm">大会员优惠</text>
+					<text class="text-yellow margin-left text-sm">会员价</text>
 				</block>
 				<block v-else>
 					{{price}} 萌
 				</block>
 			</view>
 			<view class="shopinfo-btn">
-				<text class="cu-btn bg-blue radius" @tap="shopBuy">立即购买</text>
+				<text class="cu-btn bg-shojo radius" @tap="shopBuy">立即购买</text>
 			</view>
 		</view>
 		<view class="shopinfo-bar grid col-2" v-if="isBuy==1&&type!=1">
@@ -53,7 +53,7 @@
 				已购买
 			</view>
 			<view class="shopinfo-btn">
-				<text class="cu-btn bg-blue radius" @tap="toInfo">查看详情</text>
+				<text class="cu-btn bg-shojo radius" @tap="toInfo">查看详情</text>
 			</view>
 		</view>
 		<!--加载遮罩-->

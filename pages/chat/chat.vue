@@ -43,14 +43,14 @@
 
 		<view class="cu-bar foot input" :style="[{bottom:InputBottom+'px'}]">
 			<view class="action">
-				<text class="cuIcon-pic text-grey"></text>
+				<text class="iconfont icon-rcd-image text-grey"></text>
 			</view>
 			<input class="solid-bottom" :adjust-position="false" :focus="false" maxlength="300" cursor-spacing="10"
 			 @focus="InputFocus" @blur="InputBlur" v-model="msg"></input>
 			<view class="action">
 				<text class="cuIcon-emojifill text-grey"></text>
 			</view>
-			<button class="cu-btn bg-green shadow" @tap="sendMsg()">发送</button>
+			<button class="cu-btn bg-shojo shadow" @tap="sendMsg()">发送</button>
 		</view>
 
 	</view>

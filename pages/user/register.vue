@@ -37,7 +37,7 @@
 					<input name="input" v-model="inviteCode" type="text" placeholder="请输入邀请码(必填)"></input>
 				</view>
 				<view class="user-btn flex flex-direction">
-					<button class="cu-btn bg-blue margin-tb-sm lg" @tap="userRegister">立即注册</button>
+					<button class="cu-btn bg-shojo margin-tb-sm lg" @tap="userRegister">立即注册</button>
 					<text class="text-shojo text-right margin-top" @tap="toAgreement">注册即为同意 《用户协议》</text>
 				</view>
 			</form>

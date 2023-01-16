@@ -53,11 +53,14 @@
 							<view class="content-author content-header">
 								<image :src="item.authorInfo.avatar" mode="aspectFill"></image>
 								<text class="content-author-name">{{item.authorInfo.name}}</text>
-								<text class="article-category" v-if="item.category.length>0">{{item.category[0].name}}</text>
+								<!-- <text class="article-category" v-if="item.category.length>0">{{item.category[0].name}}</text> -->
 							</view>
 						</block>
 						<view class="title">
-							<view class="text-cut">{{replaceSpecialChar(item.title)}}</view>
+							<view class="text-cut">
+								<text class="article-category bg-shojo bg-shojo-radius radius" v-if="item.category.length>0">{{item.category[0].name}}</text>
+							{{replaceSpecialChar(item.title)}}
+							</view>
 						</view>
 						<view class="content article-content">
 							
@@ -69,16 +72,16 @@
 								<view class="content-author" v-if="item.images.length>0">
 									<image :src="item.authorInfo.avatar" mode="aspectFill"></image>
 									<text class="content-author-name">{{item.authorInfo.name}}</text>
-									<text class="article-category" v-if="item.category.length>0">{{item.category[0].name}}</text>
+									<!-- <text class="article-category" v-if="item.category.length>0">{{item.category[0].name}}</text> -->
 								</view>
 							</view>
 						</view>
 						<view class="article-content-btn">
 							<view class="cu-tag data-author"><text class="cuIcon-attentionfill"></text>{{formatNumber(item.views)}}</view>
 							<view class="cu-tag data-author"><text class="cuIcon-appreciatefill"></text>{{item.likes}}</view>
-							<view class="cu-tag data-author"><text class="cuIcon-messagefill"></text>{{item.commentsNum}}</view>
+							<!-- <view class="cu-tag data-author"><text class="cuIcon-messagefill"></text>{{item.commentsNum}}</view>
 						
-							<view class="cu-tag data-time">{{formatDate(item.created)}}</view>
+							<view class="cu-tag data-time">{{formatDate(item.created)}}</view> -->
 						</view>
 					</view>
 				</view>
@@ -118,7 +121,7 @@
 									<view class="margin-top-sm flex justify-between">
 										<view class="text-gray text-df">{{formatDate(item.created)}}</view>
 										<view>
-											<text class="cuIcon-messagefill text-gray margin-left-sm" @tap="commentsAdd(item.author+'：'+item.text,item.coid,1)"></text>
+											<text class="iconfont icon-rcd-dialogue text-gray margin-left-sm" @tap="commentsAdd(item.author+'：'+item.text,item.coid,1)"></text>
 										</view>
 									</view>
 								</view>
@@ -152,7 +155,7 @@
 							</view> </view>
 					</view>
 					<view class="action goUserIndex">
-						<view class="cu-btn bg-gradual-red">主页</view>
+						<view class="cu-btn bg-shojo">主页</view>
 						
 					</view>
 				</view>

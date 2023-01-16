@@ -18,8 +18,8 @@
 				<text class="text-red myAssets-num">{{assets}}</text>萌
 			</view>
 			<view class="myAssets-btn">
-				<text class="cu-btn bg-blue radius" @tap="userrecharge">在线充值</text>
-				<text class="cu-btn bg-red radius" @tap="userwithdraw">快捷提现</text>
+				<text class="cu-btn bg-shojo radius" @tap="userrecharge">在线充值</text>
+				<text class="cu-btn bg-black radius" @tap="userwithdraw">快捷提现</text>
 			</view>
 			<view class="vip-maim" v-if="isvip==1">
 				<view class="bg-gradual-red text-center shadow-blur">

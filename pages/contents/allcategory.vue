@@ -12,7 +12,7 @@
 				<!--  #ifdef H5 || APP-PLUS -->
 				<block v-if="type=='edit'">
 				<view class="action" @tap="submit">
-					<text class="cu-btn bg-blue text-sm radius">确定</text>
+					<text class="cu-btn bg-shojo text-sm radius">确定</text>
 				</view>
 				</block>
 				<!--  #endif -->

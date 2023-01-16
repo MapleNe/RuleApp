@@ -154,7 +154,7 @@
 				</view>
 				<view class="padding-xl">
 					<view class="padding flex flex-direction">
-						<button class="cu-btn bg-blue lg" @tap="upload">本地上传</button>
+						<button class="cu-btn bg-shojo lg" @tap="upload">本地上传</button>
 						<button class="cu-btn line-red margin-tb-sm lg" @tap="goImgData">图库选择</button>
 					</view>
 				</view>

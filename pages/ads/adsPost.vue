@@ -43,7 +43,7 @@
 				</view>
 				<input placeholder="" name="input" v-model="imgurl" disabled="disabled"></input>
 				<view class="action">
-					<text class="cu-btn bg-blue radius" @tap="imgUpload">上传图片</text>
+					<text class="cu-btn bg-shojo radius" @tap="imgUpload">上传图片</text>
 				</view>
 			</view>
 			<view class="cu-form-group">
