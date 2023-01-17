@@ -22,7 +22,7 @@
 					<text class="home-noLogin">登录</text>
 				</view>
 				<view class="search-form radius">
-					<text class="iconfont icon-rcd-search" style="padding-right: 4upx;color: #666;"></text>
+					<text class="cuIcon-search" style="padding-right: 4upx;color: #666;"></text>
 					<input type="text" placeholder="搜索图片、文章、视频" confirm-type="search" disabled="disabled"  @tap="toSearch"></input>
 				</view>
 				<view class="action header-btn">

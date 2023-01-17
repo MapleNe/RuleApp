@@ -31,8 +31,15 @@
 								<image :src="avatar"></image>
 							</view>
 							<view class="user-text">
-							
-								<text class="user-info-name">{{name}}</text>
+								<block v-if="isvip==1">
+									<block v-if="vip==1">
+										<text class="user-info-name text-shojo">{{name}}</text>
+									</block>
+									<block v-else>
+										<<text class="user-info-name">{{name}}</text>
+									</block>
+								</block>
+								
 								<!-- <view class="userinfo-lv"> -->
 									<!--  #ifdef H5 || APP-PLUS -->
 								<text class="userlv" :style="getUserLvStyle(lv)">{{getUserLv(lv)}}</text>
@@ -134,7 +141,7 @@
 							<view class="cu-item">
 								<view class="cu-avatar round" :style="item.style"></view>
 								<view class="content">
-									<view class="text-grey">{{item.author}}
+									<view class="text-black">{{item.author}}
 									</view>
 									<view class="text-content text-df break-all">
 										<rich-text :nodes="markHtml(item.text)"></rich-text>

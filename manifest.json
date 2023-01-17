@@ -114,9 +114,9 @@
                 "useOriginalMsgbox" : true,
                 "androidStyle" : "default",
                 "android" : {
-                    "xxhdpi" : "static/drawable-xxhdpi/start_9.9.png",
-                    "xhdpi" : "static/drawable-xhdpi/start_9.9.png",
-                    "hdpi" : "static/drawable-hdpi/start_9.9.png"
+                    "xxhdpi" : "static/slaph.9.png",
+                    "xhdpi" : "static/slaph.9.png",
+                    "hdpi" : "static/slaph.9.png"
                 }
             }
         },
@@ -146,11 +146,19 @@
         "title" : "萌社",
         "domain" : "demo.color-ui.com",
         "router" : {
-            "base" : "/h5/",
+            "base" : "",
             "mode" : "hash"
         },
         "uniStatistics" : {
             "enable" : true
+        },
+        "optimization" : {
+            "treeShaking" : {
+                "enable" : true
+            }
+        },
+        "devServer" : {
+            "https" : true
         }
     },
     "fallbackLocale" : "zh-Hans"

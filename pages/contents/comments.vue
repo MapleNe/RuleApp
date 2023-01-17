@@ -27,20 +27,28 @@
 								<view class="cu-item">
 									<view class="cu-avatar round" @tap="toUserContents(item)" :style="item.style"></view>
 									<view class="content">
-										<view class="text-grey">{{item.author}}
+										<view class="text-black">
+											<block v-if="item.isvip>0" >
+												<block v-if="item.vip==1" class="text-shojo">
+													<view class="text-shojo">{{item.author}}</view>
+												</block>
+												<block v-else>
+														{{item.author}}
+												</block>
+											</block>
 										<!--  #ifdef H5 || APP-PLUS -->
 										<text class="userlv" :style="getUserLvStyle(item.lv)">{{getUserLv(item.lv)}}</text>
 										<!--  #endif -->
 										<text class="userlv customize" v-if="item.customize&&item.customize!=''">{{item.customize}}</text>
 										<!--  #ifdef H5 || APP-PLUS -->
-										<block v-if="item.isvip>0">
+										<!-- <block v-if="item.isvip>0">
 											<block v-if="item.vip==1">
 												<text class="isVIP bg-shojo">大会员</text>
 											</block>
 											<block v-else>
 												<text class="isVIP bg-shojo">大会员</text>
 											</block>
-										</block>
+										</block> -->
 										<!--  #endif -->
 										</view>
 										<view class="text-content text-df break-all">
@@ -58,7 +66,7 @@
 										<view class="margin-top-sm flex justify-between">
 											<view class="text-gray text-df">{{formatDate(item.created)}}</view>
 											<view>
-												<text class="cuIcon-messagefill text-gray margin-left-sm" @tap="commentsAdd(item.author+'：'+item.text,item.coid,1,item.cid)"></text>
+												<text class="iconfont icon-rcd-dialogue text-gray margin-left-sm" @tap="commentsAdd(item.author+'：'+item.text,item.coid,1,item.cid)"></text>
 											</view>
 										</view>
 									</view>

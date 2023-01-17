@@ -262,7 +262,7 @@
 							<view class="cu-item">
 								<view class="cu-avatar round" @tap="toUserContents(item)" :style="item.style"></view>
 								<view class="content">
-									<view v-if="item.isvip>1" class="text-shojo">
+									<view v-if="item.isvip>0" class="text-shojo">
 										<view v-if="item.vip==1" class="text-shojo">
 											{{item.author}}
 											<!--  #ifdef H5 || APP-PLUS -->

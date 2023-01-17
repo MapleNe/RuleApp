@@ -24,7 +24,7 @@
 					<button class="cu-btn bg-blue margin-tb-sm lg" @tap="toShop">发布商品</button>
 					
 					<!--  #endif -->
-					<button class="cu-btn bg-yellow margin-tb-sm lg" @tap="sellOrder">已售出订单</button>
+					<button class="cu-btn bg-shojo margin-tb-sm lg" @tap="sellOrder">已售出订单</button>
 				</view>
 			</view>
 			<view class="no-data" v-if="shopList.length==0">
@@ -38,7 +38,7 @@
 						<text class="bg-green shop-status" v-if="item.status==1">已上架</text>
 						<text class="bg-red shop-status" v-if="item.status==2">已禁用</text>
 						<view class="shop-img">
-							<image :src="item.imgurl"></image>
+							<image :src="item.imgurl" mode="widthFix">></image>
 						</view>
 						<view class="shop-title">
 							{{item.title}}

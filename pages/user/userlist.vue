@@ -22,19 +22,37 @@
 			<view class="cu-item" v-for="(item,index) in userList" :key="index" @tap="toUserContents(item)">
 				<view class="cu-avatar round lg" :style="item.style"></view>
 				<view class="content">
-					<view class="text-grey">
-						<block  v-if="item.screenName">{{item.screenName}}</block>
-						<block  v-else>{{item.name}}</block>
+					<view class="text-black">
+						<block v-if="item.screenName">
+							<view v-if="item.isvip>0" class="text-shojo">
+								<view v-if="item.vip==1" class="text-shojo">
+									{{item.screenName}}
+								</view>
+							</view>
+							<view v-else>
+									{{item.screenName}}
+							</view>
+						</block>
+						<block v-else>
+							<view v-if="item.isvip>0" class="text-shojo">
+								<view v-if="item.vip==1" class="text-shojo">
+									{{item.name}}
+								</view>
+							</view>
+							<view v-else>
+									{{item.name}}
+							</view>
+						</block>
 						<text v-if="item.groupKey=='contributor'||item.groupKey=='administrator'" class="cuIcon-lightfill"></text>
 						<!--  #ifdef H5 || APP-PLUS -->
-						<block v-if="item.isvip>0">
+						<!-- <block v-if="item.isvip>0">
 							<block v-if="item.vip==1">
 								<text class="isVIP bg-shojo">大会员</text>
 							</block>
 							<block v-else>
 								<text class="isVIP bg-shojo">大会员</text>
 							</block>
-						</block>
+						</block> -->
 						<!--  #endif -->
 					</view>
 					<view class="text-gray text-sm flex">

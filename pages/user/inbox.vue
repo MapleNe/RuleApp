@@ -27,7 +27,15 @@
 								<view class="cu-item">
 									<view class="cu-avatar round" :style="item.style"></view>
 									<view class="content">
-										<view class="text-grey">{{item.userJson.name}}
+										<view class="text-black">
+											<block v-if="item.userJson.isvip>0">
+												<block v-if="item.userJson.vip==1">
+													<view class="text-shojo">{{item.userJson.name}}</view>
+												</block>
+											</block>
+											<block v-else>
+												{{item.userJson.name}}
+											</block>
 											<block  v-if="item.type=='system'">
 												<text class="userlv bg-red">系统通知</text>
 											</block>

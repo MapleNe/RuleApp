@@ -19,11 +19,10 @@
 				<!--  #endif -->
 				<!--  #ifdef APP-PLUS -->
 				<view class="action header-btn">
-					<text class="cuIcon-notice" @tap="toLink('/pages/user/inbox')">
+					<text class="iconfont icon-rcd-bell" @tap="toLink('/pages/user/inbox')">
 						<text class="noticeSum bg-red" v-if="noticeSum>0">{{noticeSum}}</text>
 					</text>
 					<text class="cuIcon-scan" @tap="toScan"></text>
-					<text class="cuIcon-clothes" @tap="goStyle"></text>
 					
 				</view>
 				<!--  #endif -->
@@ -35,7 +34,7 @@
 				<view class="cu-item userinfo" v-if="userInfo==null">
 					<view class="cu-avatar round lg"></view>
 					<view class="content" @tap="toLogin">
-						<view class="text-grey">点击登录</view>
+						<view class="text-shojo">点击登录</view>
 						<view class="text-gray text-sm flex">
 							<view class="text-cut">
 								
@@ -46,12 +45,27 @@
 				<view class="cu-item userinfo" v-else  @tap="toLink('/pages/user/useredit')">
 					<view class="cu-avatar round lg" :style="userInfo.style"></view>
 					<view class="content">
-						<view class="text-grey">
+						<view class="text-black">
 							<block v-if="userInfo.screenName">
-								{{userInfo.screenName}}
+								<view v-if="userInfo.isvip==1" class="text-shojo">
+									<view v-if="userInfo.vip==1" class="text-shojo">
+										{{userInfo.screenName}}
+									
+									</view>
+								</view>
+								<view v-else>
+										{{userInfo.screenName}}
+								</view>
 							</block>
 							<block v-else>
-								{{userInfo.name}}
+								<view v-if="userInfo.isvip==1" class="text-shojo">
+									<view v-if="userInfo.vip==1" class="text-shojo">
+										{{userInfo.name}}
+									</view>
+								</view>
+								<view v-else>
+										{{userInfo.name}}
+								</view>
 							</block>
 							<text class="userlv" :style="userlvStyle">{{getUserLv(userInfo.lv)}}</text>
 							<text class="userlv customize" v-if="userInfo.customize&&userInfo.customize!=''">{{userInfo.customize}}</text>
@@ -128,7 +142,7 @@
 			<view class="cu-list menu">
 				<view class="cu-item" @tap="toLink('/pages/user/userpost')">
 					<view class="content">
-						<text class="cuIcon-settingsfill text-shojo"></text>
+						<text class="cuIcon-edit text-shojo"></text>
 						<text>我的投稿</text>
 					</view>
 					<view class="action">
@@ -137,7 +151,7 @@
 				</view>
 			<view class="cu-item" @tap="toLink('/pages/user/usermark')">
 				<view class="content">
-					<text class="cuIcon-newfill text-shojo"></text>
+					<text class="cuIcon-favor text-shojo"></text>
 					<text>我的收藏</text>
 				</view>
 				<view class="action">
@@ -146,7 +160,7 @@
 			</view>
 			<view class="cu-item" @tap="toLink('/pages/user/followList?uid='+uid)">
 				<view class="content">
-					<text class="cuIcon-newfill text-shojo"></text>
+					<text class="cuIcon-like text-shojo"></text>
 					<text>我的关注</text>
 				</view>
 				<view class="action">
@@ -155,7 +169,7 @@
 			</view>
 			<view class="cu-item" @tap="toLink('/pages/user/myshop')">
 				<view class="content">
-					<text class="cuIcon-newfill text-shojo"></text>
+					<text class="cuIcon-cart text-shojo"></text>
 					<text>我的商品</text>
 				</view>
 				<view class="action">
@@ -164,7 +178,7 @@
 			</view>
 			<view class="cu-item" @tap="toLink('/pages/user/order')">
 				<view class="content">
-					<text class="cuIcon-newfill text-shojo"></text>
+					<text class="cuIcon-pay text-shojo"></text>
 					<text>我的订单</text>
 				</view>
 				<view class="action">
@@ -175,7 +189,7 @@
 			<view class="cu-list menu">
 				<view class="cu-item" @tap="toSetUp">
 					<view class="content">
-						<text class="cuIcon-settingsfill text-shojo"></text>
+						<text class="cuIcon-settings text-shojo"></text>
 						<text>系统设置</text>
 					</view>
 					<view class="action">
@@ -185,7 +199,7 @@
 				<!--  #ifdef H5 || APP-PLUS -->
 				<view class="cu-item" @tap="toMedia">
 					<view class="content">
-						<text class="cuIcon-newfill text-shojo"></text>
+						<text class="cuIcon-new text-shojo"></text>
 						<text>社交媒体</text>
 					</view>
 					<view class="action">
@@ -194,7 +208,7 @@
 				</view>
 				<view class="cu-item"   @tap="toPage('帮助与反馈',feedback)">
 						<view class="content">
-							<text class="cuIcon-servicefill text-shojo"></text>
+							<text class="cuIcon-service text-shojo"></text>
 							<text>意见反馈</text>
 						</view>
 						<view class="action">
@@ -205,7 +219,7 @@
 				<!--  #endif -->
 				<view class="cu-item" @tap="toPage('关于平台',aboutme)">
 					<view class="content">
-						<text class="cuIcon-servicefill text-shojo"></text>
+						<text class="cuIcon-text text-shojo"></text>
 						<text>关于我们</text>
 					</view>
 					<view class="action">

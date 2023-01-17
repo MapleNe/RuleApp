@@ -12,7 +12,7 @@
 				<!--  #endif -->
 				<!--  #ifdef H5 || APP-PLUS -->
 				<view class="search-form radius" :style="[{top:StatusBar + 'px'}]">
-					<text class="iconfont icon-rcd-search" style="color: #666;"></text>
+					<text class="cuIcon-search" style="color: #666;"></text>
 					<input v-model="searchText" :adjust-position="false" type="text" placeholder="搜索文章、评论、用户" confirm-type="search"></input>
 					<view class="search-close" v-if="searchText!=''" @tap="searchClose()"><text class="cuIcon-close"></text></view>
 				</view>
