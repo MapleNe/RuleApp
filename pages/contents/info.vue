@@ -195,7 +195,7 @@
 					<view class="content-btn-box"  @tap="showModal" data-target="ChooseModal">
 						<view class="content-btn-i">
 							<text class="cuIcon-rechargefill btn-i"></text>
-							<text>投币</text>
+							<text>投喂</text>
 						</view>
 					</view>
 				</view>
@@ -1008,7 +1008,7 @@
 						})
 						if(res.data.code==1){
 							uni.showToast({
-								title: "成功打赏 "+num+"萌",
+								title: "投喂了 "+num+"萌",
 								icon: 'none'
 							})
 						}
