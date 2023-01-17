@@ -35,11 +35,10 @@
 									<block v-if="vip==1">
 										<text class="user-info-name text-shojo">{{name}}</text>
 									</block>
-									<block v-else>
-										<<text class="user-info-name">{{name}}</text>
-									</block>
 								</block>
-								
+								<block v-else>
+									<text class="user-info-name">{{name}}</text>
+								</block>
 								<!-- <view class="userinfo-lv"> -->
 									<!--  #ifdef H5 || APP-PLUS -->
 								<text class="userlv" :style="getUserLvStyle(lv)">{{getUserLv(lv)}}</text>
