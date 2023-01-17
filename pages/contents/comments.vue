@@ -32,9 +32,9 @@
 												<block v-if="item.vip==1" class="text-shojo">
 													<view class="text-shojo">{{item.author}}</view>
 												</block>
-												<block v-else>
-														{{item.author}}
-												</block>
+											</block>
+											<block v-else>
+													{{item.author}}
 											</block>
 										<!--  #ifdef H5 || APP-PLUS -->
 										<text class="userlv" :style="getUserLvStyle(item.lv)">{{getUserLv(item.lv)}}</text>

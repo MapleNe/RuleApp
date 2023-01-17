@@ -450,7 +450,7 @@
 				}, {
 					value: 1,
 					name: '2萌',
-					num:10,
+					num:2,
 					checked: false,
 					hot: false,
 				}],
