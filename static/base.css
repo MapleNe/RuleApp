@@ -735,7 +735,7 @@ page{
 .user-data{
 	padding: 30upx 30upx 10upx 30upx;
 	text-align: center;
-	border-top: solid 1px #f3f3f3;
+	/* border-top: solid 1px #f3f3f3; */
 	margin-top: 20upx;
 }
 .user-data-box{
@@ -750,12 +750,12 @@ page{
 	color: #FB7299;
 	font-size: 40upx;
 }
-.user-data-box:nth-child(1){
+/* .user-data-box:nth-child(1){
 	border-right: solid 1px #f6f6f6;
 }
 .user-data-box:nth-child(2){
 	border-right: solid 1px #f6f6f6;
-}
+} */
 .user-data-box:nth-child(3) .user-data-value{
 	color: #FB7299;
 }
